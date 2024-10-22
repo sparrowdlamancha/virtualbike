@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+body{
+
+    background-image: linear-gradient(rgba(5,7,12,0.50),rgba(5,7,12,0.50)), url(/img/fondo2.jpg);
+    background-position: center center;
+    height: 1800px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    opacity: 70;
+
+}
+
+/* DISEÑO DEL MENU */
+
+li{
+
+    list-style: none;
+
+}
+
+a{
+
+    text-decoration: none;
+    color: blanchedalmond;
+    font-size: 1.5rem;
+}
+
+#a:hover{
+    color: orange;
+}
+
+header{
+    position:relative;
+    padding: 0 2rem;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+/* DISEÑO DEL ICONO DE MENU */
+
+.navbar .toggle_btn{
+
+    color: blanchedalmond;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* DISEÑO DE LOS BOTONES */
+
+.action_btn1, .action_btn2{
+
+    background-color: orange;
+    color: #1b1a2f;
+    padding: 0.5rem 2rem;
+    align-items: center;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.action_btn1:hover, .action_btn2:hover{
+
+    scale: 1.05;
+    color: blanchedalmond;
+
+}
+
+.action_btn1:active, .action_btn2:active{
+
+    scale: 0.95;
+}
+
+#b:hover{
+
+    color: white;
+}
+
+/* DISEÑO DEL DROPDOWN MENU */
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgb(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2; /*Esto hace que el menu desplegable quede muy por encima*/
+}
+
+.dropdown_menu.open{
+
+    height: 365px;
+}
+
+.dropdown_menu li{
+
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn1,.dropdown_menu .action_btn2{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* font-weight: bold; */
+
+}
+
+/* DISEÑO DEL RESPONSIVE */
+@media(max-width: 992px){
+
+    .navbar .links,
+    .navbar .action_btn1, .action_btn2{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(max-width: 557px){
+
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+}

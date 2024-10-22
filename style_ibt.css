@@ -1,0 +1,230 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Grechen+Fuemen&family=Oswald:wght@200..700&display=swap');
+
+@font-face {
+    font-family: "Varino";
+    src: url(/fonts/Varino/Varino\ -\ Normal.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "Quantify";
+    src: url(/fonts/quantify/Quantify.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: "Elianto";
+    src: url(/fonts/Elianto/Elianto/Elianto-Regular.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    
+    font-family: "Oswald";
+    font-weight: 500;
+    font-style: normal;
+    min-height: 300vh;
+    box-sizing: border-box;
+    /* font-family: "Grechen Fuemen", cursive;
+    font-weight: 400;
+    font-style: normal; */
+    
+    
+    background-image: linear-gradient(rgba(5,7,12,0.50),rgba(5,7,12,0.50)), url(./img/fondo2.jpg);
+    background-position: center center;
+    height: 1800px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header{
+
+    position: fixed;
+    top: 10px;
+    left: 0;
+    right: 0;
+    padding: 0px 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;}
+
+.logo{
+
+    font-size: 30px;
+    text-transform: uppercase;
+    color: rgb(215, 144, 139);
+    font-weight: 900;}
+
+.menu{
+
+    height: 70px;
+    right: 25px;
+}
+
+.navigation ul{
+
+    list-style: none;
+
+}
+   
+.header .navigation ul li{
+
+    float: left;
+    position: relative;
+    margin-left: 20px;
+
+}
+
+.header .navigation ul li a{
+
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+}
+
+.header .navigation ul li a:hover{
+    background-color: rgba(169, 29, 212, 0.7);
+}
+
+.header .navigation ul li ul{
+
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: rgb(12, 17, 32,0.7);
+    display: none;
+}
+
+.header .navigation ul li ul li a{
+
+    font-size: 20px;
+    text-transform: capitalize;
+
+}
+
+.header .navigation ul li ul li ul {
+
+    position: absolute;
+    top: 0;
+    right: 200px;
+
+}
+
+.header .navigation ul li ul li {
+
+    width: 100%;
+
+}
+
+.header .navigation ul li:hover>ul{
+
+    display: initial;
+}
+
+#toggle,
+.header label{
+
+    display: none;
+    cursor: pointer;
+}
+/* SLAID DELA PAGINA INICIAL */
+@media(max-width:950px){
+
+    .header label{
+
+        display: initial;
+    }
+
+    .header{
+
+        padding: 20px 10%;
+    }
+
+    .header .navigation{
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgb(12, 17, 32,0.7);
+        display: none;
+    }
+
+    .header .navigation ul li{
+
+        width: 100%;
+    }
+
+    .header .navigation ul li a{
+
+        padding: 8px 30px 8px 10%;
+    }
+
+    .header .navigation ul li ul{
+
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .header .navigation ul li ul li{
+
+        background-color: rgb(12, 17, 32,0.7);
+
+    }
+
+    .header .navigation ul li ul li ul{
+
+        position: relative;
+        width: 100%;
+        left: 0;
+
+    }
+
+    #toggle:checked~ .navigation{
+
+        display: block;
+    }
+
+}
+
+.btn-iniciar-sesion, .btn-registrarse{
+
+    /* background:linear-gradient(to right, #4C3344, #2a233a, #141629); */
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+/* .btn-iniciar-sesion:hover, .btn-registrarse:hover {
+    opacity: 0.8; /* Efecto de desvanecimiento }*/
+
+
+
+
+
+
+
+
+
