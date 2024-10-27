@@ -1,58 +1,131 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+/* Reseteo general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif; }
+    font-family: "Poppins", sans-serif;
+}
 
-section{
-    min-height: 45vh;
+/* Estructura principal de la sección */
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sección para centrar el contenido */
+section {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px;
-        }
+    padding: 2rem;
+    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
 
-.container-re {
-    top: 2%;
-    left: 5%;
-    position: relative;
-    max-width: 1600px;
+/* Contenedor principal */
+.contenedor {
     width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 15px;
     backdrop-filter: blur(15px);
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(237, 234, 234, 0.807);
-        }
-
-.container-re header {
-    font-size: 1.5rem;
-    color: orange;
-    font-weight: 500;
+    background: rgba(255, 255, 255, 0.1);
     text-align: center;
-        }
+    box-shadow: 0 0 15px rgba(237, 234, 234, 0.5);
+}
 
-.container .form {
-    margin-top: 30px;
+/* Título */
+.contenedor h2 {
+    font-size: 2rem;
+    color: orange;
+    margin-bottom: 1rem;
 }
-.form .input-box {
-    width: 100%;
-    margin-top: 20px;
-}
-.input-box label {
-    color: #f9eded;
-}
-.form :where(.input-box input, .select-box) {
+
+/* Estilos de los campos de entrada */
+.input-contenedor {
     position: relative;
-    height: 50px;
-    width: 100%;
-    outline: none;
-    font-size: 1rem;
-    color: #f1e9e9;
-    margin-top: 8px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 0 15px;
-    }
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
 
+/* Campos de texto y select */
+.input-contenedor input,
+.input-contenedor select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Efecto flotante de las etiquetas */
+.input-contenedor label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.input-contenedor input:focus~label,
+.input-contenedor input:not(:placeholder-shown)~label,
+.input-contenedor select:focus~label,
+.input-contenedor select:not([value=""])~label {
+    top: -10px;
+    font-size: 0.85rem;
+    color: orange;
+}
+
+/* Estilo del número de celular */
+.telefono-input {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.telefono-input input {
+    flex: 1;
+}
+
+/* Casillas de verificación */
+.checkbox-contenedor {
+    text-align: left;
+    margin: 0.5rem 0;
+}
+
+.checkbox-contenedor label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Botón Guardar */
+button {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    background-color: orange;
+    color: #1b1a2f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: rgba(255, 165, 0, 0.5);
+    cursor: not-allowed;
+}
+
+button:hover:enabled {
+    background-color: darkorange;
+}

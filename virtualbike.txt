@@ -1,0 +1,2205 @@
+/home/sparrow/Documentos/Trabajos SENA/Parte 6/VirtualBikeDemo
+├── css
+│   ├── acerca.css
+	   └── *{
+
+		    font-family: 'Open Sans', sans-serif;
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		}
+
+		.acerca-de h1{
+
+		    color: #fff;
+		    font-size: 200px;
+		}
+│   ├── contacto.css
+           └── *{
+
+		    font-family: 'Open Sans', sans-serif;
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		}
+
+		.contacto h1{
+
+		    color: #fff;
+		    font-size: 200px;
+		}
+│   ├── footer.css
+           └── /*PIE DE PAGINA DE VENTANAS*/
+		*{
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		}
+
+		footer{
+
+		    width: 100%;
+		    position: relative; /* Cambiado de absolute a relative */
+		    margin-top: auto;
+		    /*background-color: rgba(0, 0, 0, 0.8); /* Fondo opcional para contraste */
+		}
+
+		.pie-pagina{
+
+		    width: 100%;
+		    backdrop-filter: blur(15px);
+		    z-index: 1000;  
+		}
+
+		.pie-pagina .grupo-1{
+
+		    width: 100%; /* ANCHO */
+		    max-width: 1200px;
+		    margin: auto;
+		    display: grid;
+		    grid-template-columns: repeat(3, 1fr);
+		    grid-gap: 50px;
+		    padding: 45px 0px;
+		}
+
+		.pie-pagina .grupo-1 .box figure{
+
+		    width: 100%; /* Ancho */
+		    height: 100%; /* Alto */
+		    display: flex;
+		    justify-content: center; /* Centrado Horizontal*/
+		    align-items: center; /* Centrado Vertical */
+		}
+
+		.pie-pagina .grupo-1 .box figure i{
+
+		    font-size: 100px;
+		    color: orange;
+
+		}
+
+		.pie-pagina .grupo-1 .box h2{
+
+		    color: orange;
+		    margin-bottom: 25px;
+		    font-size: 20px;
+		}
+
+		.pie-pagina .grupo-1 .box p{
+
+		    color: rgb(255,255,255,0.8);
+		    margin-bottom: 10px;
+		    font-family: bold;
+		}
+
+		.pie-pagina .grupo-1 .red-social a{
+
+		    display: inline-block;
+		    text-decoration: none;
+		    width: 45px;
+		    height: 45px;
+		    line-height: 45px;
+		    color: #fff;
+		    margin-right: 10px;
+		    background-color: #0d2033;
+		    text-align: center;
+		    transition: all 300ms ease;
+		}
+
+		.pie-pagina .grupo-1 .red-social a:hover{
+
+		    color: orange;
+		}
+
+		.pie-pagina .grupo-2{
+		    
+		    color: #fff;
+		    padding: 15px 10px;
+		    text-align: center;
+		}
+
+		.pie-pagina .grupo-2 small{
+
+		    font-size: 15px;
+		}
+
+		@media screen and (max-width:800px){
+
+		    .pie-pagina .grupo-1{
+
+			width: 90%; /* ANCHO */
+			grid-template-columns: repeat(1, 1fr);
+			grid-gap: 30px;
+			padding: 35px 0px;
+		    }
+		}
+
+│   ├── header.css
+	   └── /* General header styling */
+		header {
+		    position: relative;
+		    padding: 0 2rem;
+		}
+
+		.navbar {
+		    width: 100%;
+		    height: 60px;
+		    max-width: 1200px;
+		    margin: 0 auto;
+		    display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    margin-top: 10px; /* Ajusta este valor según sea necesario */
+		}
+
+
+		/*AJUSTE DE TAMAÑO, ESPACIO Y MARGEN DEL LOGO*/
+		.navbar .logo a {
+		    position: relative;
+		    top: 20px;/* Ajusta el valor para bajar el logo */
+		    font-size: 2.2rem;/*Tamaño del Logo*/
+		    font-weight: bold;
+		    color: blanchedalmond;
+		    margin-right: 2.5rem; /* Ajusta este valor para aumentar o reducir el espacio */
+		}
+
+		.navbar .links {
+		    display: flex;
+		    gap: 2rem; /* Ajusta este valor para el espacio entre links */
+		    margin-top: 50px; /* Ajusta este valor para bajar la navbar */
+		}
+
+		.navbar .links a {
+		    text-decoration: none;
+		    color: blanchedalmond;
+		    font-size: 1.5rem; /*Tamaño de los links*/
+		    margin-top: 5px; /* Baja los links individualmente */
+		}
+
+		.navbar .links a:hover {
+		    color: orange;
+		}
+
+		/* Menu toggle button */
+		.navbar .toggle_btn {
+		    color: blanchedalmond;
+		    font-size: 2rem;
+		    cursor: pointer;
+		    display: none;
+		}
+
+		/* Action buttons */
+		.action_btn1, .action_btn2 {
+		    background-color: orange;
+		    color: #1b1a2f;
+		    padding: 0.5rem 2rem;/* Ajusta el padding para cambiar el tamaño del botón */
+		    align-items: center;
+		    border-radius: 20px;
+		    outline: none;
+		    border: none;
+		    font-size: 1.5rem;/* Cambia este valor para ajustar el tamaño del texto en los botones */
+		    font-weight: bold;
+		    cursor: pointer;
+		    transition: scale 0.2 ease;
+		    margin-left: 1rem; /* Ajusta el valor para aumentar o reducir el espacio entre los botones */
+		    margin-top: 50px; /* Ajusta el valor para bajar los botones */
+		}
+
+		.action_btn1:hover, .action_btn2:hover {
+		    scale: 1.05;
+		    color: blanchedalmond;
+		}
+
+		.action_btn1:active, .action_btn2:active {
+		    scale: 0.95;
+		}
+
+		#b:hover {
+		    color: white;
+		}
+
+		/* Dropdown menu */
+		.dropdown_menu {
+		    display: none;
+		    position: absolute;
+		    right: 2rem;
+		    top: 60px;
+		    height: 0;
+		    width: 300px;
+		    background: rgba(255,255,255,0.1);
+		    backdrop-filter: blur(15px);
+		    border-radius: 10px;
+		    overflow: hidden;
+		    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		    z-index: 2;
+		}
+
+		.dropdown_menu.open {
+		    height: 365px;
+		}
+
+		.dropdown_menu li {
+		    padding: 0.7rem;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+
+		.dropdown_menu .action_btn1, .dropdown_menu .action_btn2 {
+		    width: 100%;
+		    display: flex;
+		    justify-content: center;
+		}
+
+		/* Responsive design */
+		@media (max-width: 992px) {
+		    .navbar .links,
+		    .navbar .action_btn1, .action_btn2 {
+			display: none;
+		    }
+		    .navbar .toggle_btn {
+			display: block;
+		    }
+		    .dropdown_menu {
+			display: block;
+		    }
+		    .action_btn1, .action_btn2 {
+			font-size: 1rem;
+			padding: 0.6rem 2rem;
+		    }
+		    .action_btn2 {
+			margin-left: 0.5rem;
+		    }
+		    .navbar .links a {
+			font-size: 1.5rem; /* Tamaño más pequeño para pantallas más chicas */
+		    }
+		}
+
+		@media (max-width: 557px) {
+		    .dropdown_menu {
+			left: 2rem;
+			width: unset;
+		    }
+		}
+
+│   ├── log_in.css
+           └── @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+		*{
+
+		    /* font-family: "Orbitron", sans-serif; */
+		    font-family: 'Open Sans', sans-serif;
+		    margin: 0;
+		    padding: 0;
+		    /* box-sizing: border-box; */
+		}
+
+		section{
+		    position: absolute;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    width: 100%;
+		    min-height: 70vh;
+		    
+		}
+
+		.contenedor{
+
+		    position: relative;
+		    width: 500px;
+		    border: 2px solid rgb(255, 255, 255, 0.6);
+		    border-radius: 20px;
+		    backdrop-filter: blur(15px);
+		    height: 450px;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		}
+
+		.contenedor h2{
+
+		    font-size: 3.2rem;
+		    color: #fff;
+		    text-align: center;
+		}
+
+		.input-contenedor{
+
+		    position: relative;
+		    margin: 30px 0;
+		    width: 300px;
+		    border-bottom: 2px solid #fff;
+		}
+
+		.input-contenedor label{
+
+		    position: absolute;
+		    top: 50%;
+		    left: 5px;
+		    transform: translateY(-50%);
+		    color: #fff;
+		    font-size: 1rem;
+		    pointer-events: none;
+		    transition: 0.6s;
+		    font-weight: bold;
+		}
+
+		input:focus~label,
+		input:valid~label{
+
+		    top: -5px;
+		}
+
+		.input-contenedor input{
+
+		    width: 100%;
+		    height: 50px;
+		    background-color: transparent;
+		    border: none;
+		    outline: none;
+		    font-size: 1rem;
+		    padding: - 35px 0 5px;
+		    color: #fff;
+		}
+
+		.input-contenedor i{
+
+		    position: absolute;
+		    color: #fff;
+		    font-size: 1.6rem;
+		    top: 19px;
+		    right: 8px;
+		}
+
+		.olvidar{
+
+		    margin: -15px 0 15px;
+		    font-size: 0.9rem;
+		    color: #fff;
+		    display: flex;
+		    justify-content: center;
+		}
+
+		.olvidar label input{
+
+		    margin: 3px;
+		}
+
+		.olvidar label a{
+
+		    color: #fff;
+		    text-decoration: none;
+		    transition: 0.3s;
+		    font-size: 0.9rem;
+		}
+
+		.olvidar label a:hover{
+
+		    text-decoration: underline;
+		}
+
+		button{
+
+		    width: 100%;
+		    height: 45px;
+		    border-radius: 40px;
+		    background: #fff;
+		    border: none;
+		    font-weight: bold;
+		    cursor: pointer;
+		    outline: none;
+		    font-size: 1rem;
+		    transition: 0.4s;
+		}
+
+		button:hover{
+
+		    opacity: 0.9;
+		}
+
+		.registrar{
+
+		    font-size: .8rem;
+		    color: #fff;
+		    text-align: center;
+		    margin: 20px 0 10px;
+		}
+
+		.registrar p a{
+
+		    text-decoration: none;
+		    color: #fff;
+		    font-weight: bold;
+		    transition: .3s;
+		}
+
+		.registrar p a:hover{
+
+		    text-decoration: underline;
+		}
+
+│   ├── productos.css
+	  └── *{
+		    font-family: 'Open Sans', sans-serif;
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		}
+
+		.productos h1{
+
+		    color: #fff;
+		    font-size: 200px;
+		}
+│   ├── registro.css
+	 └── @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+		/* Reseteo general */
+		* {
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		    font-family: "Poppins", sans-serif;
+		}
+
+		/* Estructura principal de la sección */
+		body, html {
+		    height: 100%;
+		    display: flex;
+		    flex-direction: column;
+		}
+
+		/* Sección para centrar el contenido */
+		section {
+		    flex: 1;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    padding: 2rem;
+		    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url('fondo.jpg');
+		    background-size: cover;
+		    background-position: center;
+		    color: #fff;
+		}
+
+		/* Contenedor principal */
+		.contenedor {
+		    width: 100%;
+		    max-width: 500px;
+		    padding: 2rem;
+		    border-radius: 15px;
+		    backdrop-filter: blur(15px);
+		    background: rgba(255, 255, 255, 0.1);
+		    text-align: center;
+		    box-shadow: 0 0 15px rgba(237, 234, 234, 0.5);
+		}
+
+		/* Título */
+		.contenedor h2 {
+		    font-size: 2rem;
+		    color: orange;
+		    margin-bottom: 1rem;
+		}
+
+		/* Estilos de los campos de entrada */
+		.input-contenedor {
+		    position: relative;
+		    margin-bottom: 1.5rem;
+		    text-align: left;
+		}
+
+		/* Campos de texto y select */
+		.input-contenedor input,
+		.input-contenedor select {
+		    width: 100%;
+		    padding: 0.8rem;
+		    border: 1px solid rgba(255, 255, 255, 0.5);
+		    border-radius: 5px;
+		    background: transparent;
+		    color: #fff;
+		    font-size: 1rem;
+		}
+
+		/* Efecto flotante de las etiquetas */
+		.input-contenedor label {
+		    position: absolute;
+		    top: 50%;
+		    left: 10px;
+		    transform: translateY(-50%);
+		    font-size: 1rem;
+		    color: rgba(255, 255, 255, 0.7);
+		    pointer-events: none;
+		    transition: all 0.3s;
+		}
+
+		.input-contenedor input:focus~label,
+		.input-contenedor input:not(:placeholder-shown)~label,
+		.input-contenedor select:focus~label,
+		.input-contenedor select:not([value=""])~label {
+		    top: -10px;
+		    font-size: 0.85rem;
+		    color: orange;
+		}
+
+		/* Estilo del número de celular */
+		.telefono-input {
+		    display: flex;
+		    gap: 0.5rem;
+		}
+
+		.telefono-input input {
+		    flex: 1;
+		}
+
+		/* Casillas de verificación */
+		.checkbox-contenedor {
+		    text-align: left;
+		    margin: 0.5rem 0;
+		}
+
+		.checkbox-contenedor label {
+		    font-size: 0.9rem;
+		    color: rgba(255, 255, 255, 0.8);
+		}
+
+		/* Botón Guardar */
+		button {
+		    width: 100%;
+		    padding: 0.7rem;
+		    font-size: 1.1rem;
+		    background-color: orange;
+		    color: #1b1a2f;
+		    border: none;
+		    border-radius: 5px;
+		    cursor: pointer;
+		    transition: background-color 0.3s;
+		}
+
+		button:disabled {
+		    background-color: rgba(255, 165, 0, 0.5);
+		    cursor: not-allowed;
+		}
+
+		button:hover:enabled {
+		    background-color: darkorange;
+		}
+
+
+│   ├── servicios.css
+	  └── *{ 
+		    font-family: 'Open Sans', sans-serif;
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		}
+
+		.servicios h1{
+
+		    color: #fff;
+		    font-size: 200px;
+		}
+│   ├── style_backround.css
+	   └── /* Restante en style_backround.css */
+		* {
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: border-box;
+		    font-family: 'Open Sans', sans-serif;
+		}
+
+		body {
+		    background-image: linear-gradient(rgba(5,7,12,0.50), rgba(5,7,12,0.50)), url(/img/fondo2.jpg);
+		    background-position: center center;
+		    height: 1800px;
+		    background-repeat: no-repeat;
+		    background-attachment: fixed;
+		    background-size: cover;
+		    opacity: 70;
+		}
+
+		li {
+		    list-style: none;
+		}
+
+		a {
+		    text-decoration: none;
+		    color: blanchedalmond;
+		    font-size: 1.5rem;
+		}
+
+		#a:hover {
+		    color: orange;
+		}
+
+│   ├── style_slaid1 copy.css
+│   └── style_slaid1.css
+	  └── /* CODIGO DEL SLAID */
+		@font-face {
+		    font-family: "Varino";
+		    src: url(/fonts/Varino/Varino\ -\ Normal.ttf);
+		    font-weight: bold;
+		    font-style: bold;
+		}
+
+		@font-face {
+		    font-family: "Quantify";
+		    src: url(/fonts/quantify/Quantify.ttf);
+		    font-weight: bold;
+		    font-style: bold;
+		}
+
+		@font-face {
+		    font-family: "Elianto";
+		    src: url(/fonts/Elianto/Elianto/Elianto-Regular.ttf);
+		    font-weight: bold;
+		    font-style: bold;
+		}
+
+
+		*{
+		    margin: 10px;
+		    padding: 20px;
+		    box-sizing: border-box;
+		}
+
+		body{
+
+		    overflow: hidden;
+		}
+
+		.container{
+
+		    position: fixed;
+		    top: 45%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+		    width: 1280px;
+		    height: 720px;
+		    z-index: 1; /* Esto hace  que el container del Slaider este debajo */
+		}
+
+		.container .slide .item{
+
+		    width: 220px;
+		    height: 500px;
+		    position: absolute;
+		    top: 50%;
+		    transform: translate(0, -50%);
+		    border-radius: 20px;
+		    box-shadow: 0 10px 20px rgba(203, 135, 32, 0.7);
+		    background-position: 50% 50%;
+		    background-size: cover;
+		    display: inline-block;
+		    transition: 0.5s;
+		}
+
+		.slide .item:nth-child(1),
+		.slide .item:nth-child(2){
+
+		    top: 0%;
+		    left: 0%;
+		    transform: translate(0,0);
+		    border-radius: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+
+		.slide .item:nth-child(3){
+
+		    left: 80%;
+		}
+
+		.slide .item:nth-child(4){
+
+		    left: calc(80% + 230px);
+
+		}
+		.slide .item:nth-child(5){
+
+		    left: calc(80% + 460px);
+		}
+
+		.slide .item:nth-child(n+6){
+
+		    left: calc(80% + 660px);
+		    opacity: 0;
+		}
+
+		.item .content{
+
+		    position: absolute;
+		    top: 50%;
+		    left: 100px;
+		    width: 300px;
+		    text-align: left;
+		    color: rgb(255, 255, 255);
+		    transform: translate(0, -50%);
+		    font-family: system-ui;
+		    display: none;
+		}
+
+		.slide .item:nth-child(2) .content{
+		    
+		    display: block;
+		}
+
+		.content .name{
+
+		    font-size: 50px;
+		    text-transform: uppercase;
+		    font-weight: bold;
+		    opacity: 0;
+		    animation: animate 1s ease-in-out 1 forwards;   
+		}
+
+		.content .des{
+
+		    margin-top: 10px;
+		    margin-bottom: 20px;
+		    opacity: 0;
+		    animation: animate 1s ease-in-out 0.3s 1 forwards;
+		}
+
+		.content button{
+
+		    padding: 10px 20px;
+		    border: none;
+		    cursor: pointer;
+		    opacity: 0;
+		    animation: animate 1s ease-in-out 0.6s 1 forwards;
+		    
+		}
+
+		.content button:hover{
+
+		    background: rgb(203, 135, 32, 0.7);
+		    color: aliceblue;
+		}
+
+		@keyframes animate {
+
+		    from{
+			opacity: 0;
+			transform: translate(0, 100px);
+			filter: blur(33px);
+			}
+
+			to{
+			    opacity: 1;
+			    transform: translate(0);
+			    filter: blur(0);
+			}
+		    }
+		    
+		.button{
+
+		    width: 100%;
+		    text-indent: 50%;
+		    position: relative  ;
+		    top: 80%;
+		    bottom: 20px;
+		    
+		}
+
+		.button button{
+
+		    width: 40px;
+		    height: 35px;
+		    border-radius: 8px;
+		    border: none;
+		    cursor: pointer;
+		    margin: 0 5px;
+		    border: 1px solid rgba(203, 135, 32, 0.7);
+		    transition: 0.3s;
+		}
+
+		.button button:hover{
+
+		    background: rgb(203, 135, 32, 0.7);
+		    color: aliceblue;
+		}
+├── fonts
+│   ├── Elianto
+│   │   ├── Elianto
+│   │   │   ├── Elianto-Regular.otf
+│   │   │   └── Elianto-Regular.ttf
+│   │   └── __MACOSX
+│   │       └── Elianto
+│   ├── Elianto.zip
+│   ├── quantify
+│   │   ├── Preview.png
+│   │   ├── Quantify.ttf
+│   │   └── Readme.txt
+│   ├── quantify.zip
+│   ├── Varino
+│   │   ├── Varino - Normal.otf
+│   │   └── Varino - Normal.ttf
+│   └── Varino.zip
+├── .git
+│   ├── branches
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── HEAD
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── push-to-checkout.sample
+│   │   ├── sendemail-validate.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── main
+│   │       └── remotes
+│   │           └── origin
+│   │               └── main
+│   ├── objects
+│   │   ├── 06
+│   │   │   └── afde978b9d8baa76ddae49f8d83cb3afbf7dd2
+│   │   ├── 07
+│   │   │   └── efeb2013a5f05e3735b94c11522ca46deec513
+│   │   ├── 0c
+│   │   │   └── 6bccbf521bff68db774bed169cf23436f3e56e
+│   │   ├── 0e
+│   │   │   └── 56cc34f76dda3cc90f5bbb537a19223aa656f5
+│   │   ├── 1a
+│   │   │   └── e1b36b0829377b9ac4a6ebeeeb846e483f59e1
+│   │   ├── 1c
+│   │   │   └── 65a8da866f818400a3899f1239f557b86581db
+│   │   ├── 21
+│   │   │   └── 6c19af1b9881396d01e558eb16969b5e363dc5
+│   │   ├── 23
+│   │   │   └── 6c8ef8b7b4f852588b576253619fc3fd93ba12
+│   │   ├── 25
+│   │   │   └── f5084532924764f847fc0b7161662274461518
+│   │   ├── 28
+│   │   │   └── 0957069ceeff0cd287cb6b1e7e785b9b79348d
+│   │   ├── 2d
+│   │   │   └── bbc962f9f5c30ddbb4aa78a9ec93167b7ce5b9
+│   │   ├── 34
+│   │   │   └── 0f8dcc2d2a7f23f2419d2781bf89efb3f60282
+│   │   ├── 38
+│   │   │   └── a8837e19b23c2b18e140940ea1af34a587603b
+│   │   ├── 3f
+│   │   │   └── 8271523583a1da21d99bf11b16e5a79a192a94
+│   │   ├── 40
+│   │   │   └── f72112562b732d59fe71692702cabea00edb10
+│   │   ├── 43
+│   │   │   └── 2ff991b3694fb3e2ae024cbdfd70b4ccb1de18
+│   │   ├── 48
+│   │   │   └── 50f9d291fc5bd7f57eca8e279ba5c28bfbf35f
+│   │   ├── 4d
+│   │   │   ├── 31d7c44d74a0772569d2bfe6520333ebc1265c
+│   │   │   └── 6f80747ae737463805482828deb69284307395
+│   │   ├── 50
+│   │   │   └── 832dc99a3390883d4abf63a74466ed816ad715
+│   │   ├── 56
+│   │   │   ├── 0c366f8e62c663c98454f945d60a04af299cf7
+│   │   │   └── 96ea953d5a137386c4d49d8f0a94c9fa97699d
+│   │   ├── 62
+│   │   │   ├── 0d4248a90a97b5737620d02d7500ed8854a073
+│   │   │   └── be390d5daac88455e7abdad5746c812d22595c
+│   │   ├── 6a
+│   │   │   ├── b97560a4a3e91cf495c78da9ed374eeeaf7de8
+│   │   │   └── d449cbbebefd352ffccc7925c7a552d7d424c0
+│   │   ├── 6d
+│   │   │   └── 2c1a80f21d3d04aaeaf9e335d7ea0b5851af87
+│   │   ├── 70
+│   │   │   └── 5f4ab2d72ff53e2a26a8cc5f3b038b2ac18fb3
+│   │   ├── 72
+│   │   │   └── 560664bb6adc5e758611b40afc95d9a53d989f
+│   │   ├── 74
+│   │   │   └── 95484881f8aa9611ea887eb954641482511301
+│   │   ├── 7a
+│   │   │   ├── 7795d809a995b2c5e3af36850462ecb186c30d
+│   │   │   └── 7c09a39290916faab16eaa8a6770b4d46ea385
+│   │   ├── 88
+│   │   │   └── 80c05f699917d0de916d20abb34555fcbb1c08
+│   │   ├── 8b
+│   │   │   └── 697273de834913199452bd86c7e5cd2a6a74b7
+│   │   ├── 8e
+│   │   │   └── f92b1dd3696cd3defa90bf13428cb6a5731d51
+│   │   ├── 91
+│   │   │   └── 7339b1657af5ceab67b65d521e02a72fe435ef
+│   │   ├── 94
+│   │   │   └── 6158ba2308edc42c9d8c5f0d36e98ef8429caf
+│   │   ├── 99
+│   │   │   └── 13b14a2697f36eee8bc7c73e8cc47d8d34075a
+│   │   ├── a0
+│   │   │   ├── 48d1078aecb1662e8622d9ac0924af3290029e
+│   │   │   └── e513aff5e4f90a7dcb32099da61aa922fe1362
+│   │   ├── a3
+│   │   │   └── a21e41f1e1b8e006de87eef25a32b018bddbd1
+│   │   ├── a4
+│   │   │   └── f196a9b947dfb0570c2602e7d58ce255b1c738
+│   │   ├── a5
+│   │   │   └── 0b09153a75958d90f08ea00264c3c0023032a5
+│   │   ├── aa
+│   │   │   ├── 005195a49a90192ccaddcdfb532d7a7a563061
+│   │   │   └── 48b51395e093112095c4b1e9f4734c5efe143f
+│   │   ├── b6
+│   │   │   └── 0d5ed8b3e722dfb734dbea8b85c6b41461de44
+│   │   ├── b9
+│   │   │   └── dd69240d86366a69b5170291bead65f32180b0
+│   │   ├── bb
+│   │   │   └── 594b8fbf217b5f8c926099170fcbd3e223f45d
+│   │   ├── be
+│   │   │   └── ee226c51eb67124525930080194ce5f51f6853
+│   │   ├── bf
+│   │   │   └── 3af96a0369bcbc3415b1001ff4b3ab4cb7e287
+│   │   ├── c4
+│   │   │   └── 2872612619205f7cac1dd3568fb795e5abf286
+│   │   ├── dc
+│   │   │   └── 3117f55b2a34f443c4342b0980215140321b62
+│   │   ├── dd
+│   │   │   └── 00ffafeab5ee815d3abba6d3ac32a83561cc16
+│   │   ├── de
+│   │   │   └── 79db617f3848050737e09993e580b87468b83e
+│   │   ├── e4
+│   │   │   └── 851da3ac811c07dd677fc2871b2ea2d2f36ebd
+│   │   ├── e6
+│   │   │   └── 399d37c4d21e828bf0b28d8eaf92126e5d5feb
+│   │   ├── e8
+│   │   │   └── 53f445528191251b0e757e70da27b55087518f
+│   │   ├── ea
+│   │   │   └── 0f5ab56e9288452c8ca3abee284ae3d36d30a1
+│   │   ├── f2
+│   │   │   └── 36b7b0c70482166ed4e136e2839a802c26fe36
+│   │   ├── f8
+│   │   │   └── 00997b00bc7616cd9e660b4278bab8602a8ac7
+│   │   ├── fb
+│   │   │   └── a168a2bd7b9e5702f56331e8b8a160a2e1d5fa
+│   │   ├── info
+│   │   └── pack
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       ├── remotes
+│       │   └── origin
+│       │       └── main
+│       └── tags
+├── img
+│   ├── code-solid.svg
+│   ├── fondo2.jpg
+│   ├── logo1.jpg
+│   ├── logo2.jpg
+│   ├── logo3.jpg
+│   ├── menu.png
+│   ├── mtb1.jpg
+│   ├── mtb2.jpg
+│   ├── mtb3.jpg
+│   ├── mtb4.jpg
+│   ├── mtb5.jpg
+│   ├── ropa1.jpg
+│   ├── ropa2.jpg
+│   ├── ropa3.jpg
+│   ├── ropa4.jpg
+│   ├── ruta1.jpg
+│   ├── ruta2.jpg
+│   ├── ruta3.jpg
+│   └── ruta4.jpg
+├── index copy.html
+├── index.html
+	└── <!DOCTYPE html>
+		<html lang="en">
+		<head>
+		    <meta charset="UTF-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+		    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+		    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		    <link rel="stylesheet" href="/css/style_slaid1.css">
+		    <link rel="stylesheet" href="/css/header.css">
+		    <link rel="stylesheet" href="/css/footer.css">
+		    <link rel="stylesheet" href="/css/style_backround.css"> 
+
+		    <title>VirtualBike</title>
+
+		    <style>
+
+			
+
+		    </style>
+		    
+		</head>
+		<body>
+
+		    <header>
+			<div class="navbar">
+			    <div class="logo"><a id="a" href="/index.html">VirtualBike</a></div>
+			    <ul class="links">
+				<li><a id="a" href="/ventanas/acerca.html">About</a></li>
+				<li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+				<li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+				<li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+			    </ul>
+			    <a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a>
+			    <a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a>
+			    <div class="toggle_btn">
+				<i class="fa-solid fa-bars"></i> 
+			    </div>
+			</div>
+
+			<div class="dropdown_menu">
+			    
+			    <li><a id="a" href="/ventanas/acerca.html">About</a></li>
+			    <li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+			    <li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+			    <li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+			    <li><a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a></li>
+			    <li><a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a></li>
+			</div>
+
+		    </header>
+
+		    <div class="hero"></div>
+		    <div class="container">
+
+			<div class="slide">
+
+			    <div class="item" style="background-image: url(./img/mtb1.jpg);">
+				<div class="content">
+				    <div class="name">New MTB Model 1 </div>
+				    <div class="des">New 1x13V MBT GW, with 2.0 
+				        Raptorshok hydraulic front suspension and 
+				        Forceshock rear suspension, Sram 2.0 hydraulic brakes</div>
+				    <button>Show More</button>         
+				</div>
+			    </div>
+
+			    <div class="item" style="background-image: url(./img/mtb3.jpg);">
+				<div class="content">
+				    <div class="name">New MTB Model 2 </div>
+				    <div class="des">New Trek Fuel EX 9.8 1x12V MTB, Fox 34 Performance 
+				        front suspension and Fox Float DPS rear suspension, 
+				        Shimano XT hydraulic brakes.</div>
+				    <button>Show More</button>         
+				</div>
+			    </div>
+
+			    <div class="item" style="background-image: url(./img/ruta2.jpg);">
+				<div class="content">
+				    <div class="name">New Route 1 Model</div>
+				    <div class="des">Nueva bici de Ruta Specialized Tarmac SL7, grupo Shimano 
+				        Dura-Ace Di2 de 2x11V, frenos de disco hidráulicos, cuadro de carbono 
+				        FACT 12r.</div>
+				    <button>Show More</button>         
+				</div>
+			    </div>
+
+			    <div class="item" style="background-image: url(./img/ruta4.jpg);">
+				<div class="content">
+				    <div class="name">New Route 2 Model</div>
+				    <div class="des">New Canyon Ultimate CF SLX road bike, 2x12V SRAM Red 
+				        eTap AXS groupset, hydraulic disc brakes, premium carbon frame.</div>
+				    <button>Show More</button>         
+				</div>
+			    </div>
+
+			    <div class="item" style="background-image: url(./img/ropa1.jpg);">
+				<div class="content">
+				    <div class="name">New Designs for Men</div>
+				    <div class="des">Castelli Aero Race 6.0 cycling jersey, Velocity 
+				        fabric Rev2, elastic sleeves. Castelli 
+				        Free Aero Race 4.0 shorts, Progetto X² Air chamois.</div>
+				    <button>Show More</button>         
+				</div>
+			    </div>
+
+			    <div class="item" style="background-image: url(./img/ropa3.jpg);">
+				<div class="content">
+				    <div class="name">New Designs for Women </div>
+				    <div class="des">Rapha Women's Core Jersey cycling shirt, 
+				        light fabric, three back pockets. Rapha Women's 
+				        Core Shorts, women's specific chamois, high waist.</div>
+				    <button>Show More</button>         
+				</div>
+			    </div>
+
+			</div>
+
+			<div class="button">
+			    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+			    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+			</div>
+		    </div>
+		    
+		    <footer class="pie-pagina">
+			<div class="grupo-1">
+			    <div class="box">
+				<figure>
+				    <a href="#">
+				        <i class="fa-solid fa-code" alt="Logo DT8"></i>
+				        <!-- <img src="/img/code-solid.svg" alt="Logo de DT8"> -->
+				    </a>
+				</figure>
+			    </div>
+			    <div class="box">
+				<h2>Developer Team 8</h2>
+				<p>Specialists in software analysis and development, we transform 
+				    ideas into innovative and high-quality technological solutions.</p>
+			    </div>
+			    <div class="box">
+				<h2>Social Media</h2>
+				<div class="red-social">
+				    <a href="#" class="fa-brands fa-square-facebook"></a>
+				    <a href="#" class="fa-brands fa-square-instagram"></a>
+				    <a href="#" class="fa-brands fa-square-x-twitter"></a>
+				    <a href="#" class="fa-brands fa-youtube"></a>
+				</div>
+			    </div>
+			</div>
+
+			<div class="grupo-2">
+			    <small>
+				&copy; 2024 <b>Development Team 8</b> - All rights reserved.
+			    </small>
+			</div>
+
+		    </footer>
+		    
+		    <script src="js/slaid1.js"></script>
+		    <script src="js/menu.js"></script>
+
+		</body>
+		</html>
+├── js
+│   ├── menu.js
+	  └── const toggleBtn = document.querySelector('.toggle_btn')
+		const toggleBtnIcon = document.querySelector('.toggle_btn i')
+		const dropDownMenu = document.querySelector('.dropdown_menu')
+
+		toggleBtn.onclick = function(){
+
+		    dropDownMenu.classList.toggle('open')
+		    const isOpen = dropDownMenu.classList.contains('open')
+
+		    toggleBtnIcon.classList = isOpen
+		    ?'fa-solid fa-xmark'
+		    :'fa-solid fa-bars'
+		}
+│   ├── registro.js
+	  └── document.addEventListener("DOMContentLoaded", () => {
+		    const tratamientoCheckbox = document.getElementById("tratamiento");
+		    const guardarBtn = document.getElementById("guardar");
+
+		    tratamientoCheckbox.addEventListener("change", () => {
+			guardarBtn.disabled = !tratamientoCheckbox.checked;
+		    });
+	    });
+
+│   └── slaid1.js
+	  └── // Selecciona el botón de siguiente
+		let next = document.querySelector('.next');
+		// Selecciona el botón de anterior
+		let prev = document.querySelector('.prev');
+
+		// Función para mover a la siguiente diapositiva
+		function moveToNextSlide() {
+		    // Selecciona todas las diapositivas
+		    let items = document.querySelectorAll('.item');
+		    // Mueve la primera diapositiva al final de la lista de diapositivas
+		    document.querySelector('.slide').appendChild(items[0]);
+		}
+
+		// Función para mover a la diapositiva anterior
+		function moveToPrevSlide() {
+		    // Selecciona todas las diapositivas
+		    let items = document.querySelectorAll('.item');
+		    // Mueve la última diapositiva al principio de la lista de diapositivas
+		    document.querySelector('.slide').prepend(items[items.length - 1]);
+		}
+
+		// Añade un evento al botón de siguiente para mover a la siguiente diapositiva
+		next.addEventListener('click', function() {
+		    moveToNextSlide(); // Llama a la función para mover a la siguiente diapositiva
+		    resetAutoSlide(); // Reinicia el temporizador de movimiento automático
+		});
+
+		// Añade un evento al botón de anterior para mover a la diapositiva anterior
+		prev.addEventListener('click', function() {
+		    moveToPrevSlide(); // Llama a la función para mover a la diapositiva anterior
+		    resetAutoSlide(); // Reinicia el temporizador de movimiento automático
+		});
+
+		// Configura un intervalo para mover automáticamente a la siguiente diapositiva cada 3 segundos
+		let autoSlideInterval = setInterval(moveToNextSlide, 5000);
+
+		// Función para reiniciar el temporizador de movimiento automático
+		function resetAutoSlide() {
+		    // Detiene el temporizador actual
+		    clearInterval(autoSlideInterval);
+		    // Inicia un nuevo temporizador
+		    autoSlideInterval = setInterval(moveToNextSlide, 5000); 
+		    //1000 = 1s
+		}
+
+├── style_ibt.css
+	└── @import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Oswald:wght@200..700&display=swap');
+
+		@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Grechen+Fuemen&family=Oswald:wght@200..700&display=swap');
+
+		@font-face {
+		    font-family: "Varino";
+		    src: url(/fonts/Varino/Varino\ -\ Normal.ttf);
+		    font-weight: bold;
+		    font-style: bold;
+		}
+
+		@font-face {
+		    font-family: "Quantify";
+		    src: url(/fonts/quantify/Quantify.ttf);
+		    font-weight: bold;
+		    font-style: bold;
+		}
+
+		@font-face {
+		    font-family: "Elianto";
+		    src: url(/fonts/Elianto/Elianto/Elianto-Regular.ttf);
+		    font-weight: bold;
+		    font-style: bold;
+		}
+
+
+		*,
+		*::before,
+		*::after{
+		    margin: 0;
+		    padding: 0;
+		    box-sizing: inherit;
+		}
+
+		body{
+		    
+		    font-family: "Oswald";
+		    font-weight: 500;
+		    font-style: normal;
+		    min-height: 300vh;
+		    box-sizing: border-box;
+		    /* font-family: "Grechen Fuemen", cursive;
+		    font-weight: 400;
+		    font-style: normal; */
+		    
+		    
+		    background-image: linear-gradient(rgba(5,7,12,0.50),rgba(5,7,12,0.50)), url(./img/fondo2.jpg);
+		    background-position: center center;
+		    height: 1800px;
+		    background-repeat: no-repeat;
+		    background-attachment: fixed;
+		    background-size: cover;
+		}
+
+		.header{
+
+		    position: fixed;
+		    top: 10px;
+		    left: 0;
+		    right: 0;
+		    padding: 0px 1%;
+		    display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+		    z-index: 1000;}
+
+		.logo{
+
+		    font-size: 30px;
+		    text-transform: uppercase;
+		    color: rgb(215, 144, 139);
+		    font-weight: 900;}
+
+		.menu{
+
+		    height: 70px;
+		    right: 25px;
+		}
+
+		.navigation ul{
+
+		    list-style: none;
+
+		}
+		   
+		.header .navigation ul li{
+
+		    float: left;
+		    position: relative;
+		    margin-left: 20px;
+
+		}
+
+		.header .navigation ul li a{
+
+		    font-size: 30px;
+		    color: rgb(255, 255, 255);
+		    text-decoration: none;
+		    padding: 20px;
+		    display: block;
+		    transition: all .2s ease;
+		}
+
+		.header .navigation ul li a:hover{
+		    background-color: rgba(169, 29, 212, 0.7);
+		}
+
+		.header .navigation ul li ul{
+
+		    position: absolute;
+		    right: 0;
+		    width: 300px;
+		    background-color: rgb(12, 17, 32,0.7);
+		    display: none;
+		}
+
+		.header .navigation ul li ul li a{
+
+		    font-size: 20px;
+		    text-transform: capitalize;
+
+		}
+
+		.header .navigation ul li ul li ul {
+
+		    position: absolute;
+		    top: 0;
+		    right: 200px;
+
+		}
+
+		.header .navigation ul li ul li {
+
+		    width: 100%;
+
+		}
+
+		.header .navigation ul li:hover>ul{
+
+		    display: initial;
+		}
+
+		#toggle,
+		.header label{
+
+		    display: none;
+		    cursor: pointer;
+		}
+		/* SLAID DELA PAGINA INICIAL */
+		@media(max-width:950px){
+
+		    .header label{
+
+			display: initial;
+		    }
+
+		    .header{
+
+			padding: 20px 10%;
+		    }
+
+		    .header .navigation{
+
+			position: absolute;
+			top: 100%;
+			left: 0;
+			right: 0;
+			background-color: rgb(12, 17, 32,0.7);
+			display: none;
+		    }
+
+		    .header .navigation ul li{
+
+			width: 100%;
+		    }
+
+		    .header .navigation ul li a{
+
+			padding: 8px 30px 8px 10%;
+		    }
+
+		    .header .navigation ul li ul{
+
+			position: relative;
+			width: 100%;
+			left: 0;
+		    }
+
+		    .header .navigation ul li ul li{
+
+			background-color: rgb(12, 17, 32,0.7);
+
+		    }
+
+		    .header .navigation ul li ul li ul{
+
+			position: relative;
+			width: 100%;
+			left: 0;
+
+		    }
+
+		    #toggle:checked~ .navigation{
+
+			display: block;
+		    }
+
+		}
+
+		.btn-iniciar-sesion, .btn-registrarse{
+
+		    /* background:linear-gradient(to right, #4C3344, #2a233a, #141629); */
+		    border-radius: 20px;
+		    border: none;
+		    cursor: pointer;
+		    
+		}
+
+		/* .btn-iniciar-sesion:hover, .btn-registrarse:hover {
+		    opacity: 0.8; /* Efecto de desvanecimiento }*/
+
+├── ventanas
+│   ├── acerca.html
+	  └── <!DOCTYPE html>
+		<html lang="en">
+		<head>
+		    <meta charset="UTF-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+		    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+		    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		    <link rel="stylesheet" href="/css/style_backround.css">
+		    <link rel="stylesheet" href="/css/header.css">
+		    <link rel="stylesheet" href="/css/footer.css">
+		    <link rel="stylesheet" href="/css/acerca.css">
+
+
+		    <title>VirtualBike</title>
+
+		    <style>
+
+			@import"/css/style_backround.css";
+			@import"/css/log_in.css";
+
+		    </style>
+		    
+		</head>
+		<body>
+
+		    <header>
+			<div class="navbar">
+			    <div class="logo"><a id="a" href="/index.html">VirtualBike</a></div>
+			    <ul class="links">
+				<li><a id="a"  href="/ventanas/acerca.html">About</a></li>
+				<li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+				<li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+				<li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+			    </ul>
+			    <a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a>
+			    <a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a>
+			    <div class="toggle_btn">
+				<i class="fa-solid fa-bars"></i> 
+			    </div>
+			</div>
+
+			<div class="dropdown_menu">
+			    
+			    <li><a id="a" href="/ventanas/acerca.html">About</a></li>
+			    <li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+			    <li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+			    <li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+			    <li><a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a></li>
+			    <li><a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a></li>
+			</div>
+
+		    </header>
+
+		    <section>
+		     <div class="acerca-de">
+			<h1>Acerca de </h1>
+		     </div>
+		    </section>
+		    
+
+		    <footer class="pie-pagina">
+			<div class="grupo-1">
+			    <div class="box">
+				<figure>
+				    <a href="#">
+				        <i class="fa-solid fa-code" alt="Logo DT8"></i>
+				        <!-- <img src="/img/code-solid.svg" alt="Logo de DT8"> -->
+				    </a>
+				</figure>
+			    </div>
+			    <div class="box">
+				<h2>Developer Team 8</h2>
+				<p>Specialists in software analysis and development, we transform 
+				    ideas into innovative and high-quality technological solutions.</p>
+			    </div>
+			    <div class="box">
+				<h2>Social Media</h2>
+				<div class="red-social">
+				    <a href="#" class="fa-brands fa-square-facebook"></a>
+				    <a href="#" class="fa-brands fa-square-instagram"></a>
+				    <a href="#" class="fa-brands fa-square-x-twitter"></a>
+				    <a href="#" class="fa-brands fa-youtube"></a>
+				</div>
+			    </div>
+			</div>
+
+			<div class="grupo-2">
+			    <small>
+				&copy; 2024 <b>Development Team 8</b> - All rights reserved.
+			    </small>
+			</div>
+
+		    </footer>
+		    <script src="/js/menu.js"></script>
+		   
+		</body>
+		</html>
+│   ├── contacto.html
+	  └── <!DOCTYPE html>
+		<html lang="en">
+		<head>
+		    <meta charset="UTF-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+		    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+		    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		    <link rel="stylesheet" href="/css/style_backround.css">
+		    <link rel="stylesheet" href="/css/header.css">
+		    <link rel="stylesheet" href="/css/footer.css">
+		    <link rel="stylesheet" href="/css/contacto.css">
+
+
+		    <title>VirtualBike</title>
+
+		    <style>
+
+			@import"/css/style_backround.css";
+			@import"/css/log_in.css";
+
+		    </style>
+		    
+		</head>
+		<body>
+
+		    <header>
+			<div class="navbar">
+			    <div class="logo"><a id="a" href="/index.html">VirtualBike</a></div>
+			    <ul class="links">
+				<li><a id="a"  href="/ventanas/acerca.html">About</a></li>
+				<li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+				<li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+				<li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+			    </ul>
+			    <a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a>
+			    <a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a>
+			    <div class="toggle_btn">
+				<i class="fa-solid fa-bars"></i> 
+			    </div>
+			</div>
+
+			<div class="dropdown_menu">
+			    
+			    <li><a id="a" href="/ventanas/acerca.html">About</a></li>
+			    <li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+			    <li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+			    <li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+			    <li><a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a></li>
+			    <li><a id="b" href="#" class="action_btn2">Get into</a></li>
+			</div>
+
+		    </header>
+
+		    <section>
+			<div class="contacto">
+			    <h1>Contact</h1>
+			</div>
+		    </section>
+
+		    <footer class="pie-pagina">
+			<div class="grupo-1">
+			    <div class="box">
+				<figure>
+				    <a href="#">
+				        <i class="fa-solid fa-code" alt="Logo DT8"></i>
+				        <!-- <img src="/img/code-solid.svg" alt="Logo de DT8"> -->
+				    </a>
+				</figure>
+			    </div>
+			    <div class="box">
+				<h2>Developer Team 8</h2>
+				<p>Specialists in software analysis and development, we transform 
+				    ideas into innovative and high-quality technological solutions.</p>
+			    </div>
+			    <div class="box">
+				<h2>Social Media</h2>
+				<div class="red-social">
+				    <a href="#" class="fa-brands fa-square-facebook"></a>
+				    <a href="#" class="fa-brands fa-square-instagram"></a>
+				    <a href="#" class="fa-brands fa-square-x-twitter"></a>
+				    <a href="#" class="fa-brands fa-youtube"></a>
+				</div>
+			    </div>
+			</div>
+
+			<div class="grupo-2">
+			    <small>
+				&copy; 2024 <b>Development Team 8</b> - All rights reserved.
+			    </small>
+			</div>
+
+		    </footer>
+		    <script src="/js/menu.js"></script>
+		   
+		</body>
+		</html>
+│   ├── log_in.html
+|	  └── <!DOCTYPE html>
+|		<html lang="en">
+|		<head>
+|		    <meta charset="UTF-8">
+|		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|
+|		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+|		    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+|		    crossorigin="anonymous" referrerpolicy="no-referrer" />
+|
+|		    <link rel="stylesheet" href="/css/style_backround.css">
+|		    <link rel="stylesheet" href="/css/header.css">
+|		    <link rel="stylesheet" href="/css/footer.css">
+|
+|
+|		    <title>VirtualBike</title>
+|
+|		    <style>
+|
+|			@import"/css/style_backround.css";
+|			@import"/css/log_in.css";
+|
+|		    </style>
+|		    
+|		</head>
+|		<body>
+|
+|		    <header>
+|			<div class="navbar">
+|			    <div class="logo"><a id="a" href="/index.html">VirtualBike</a></div>
+|			    <ul class="links">
+|				<li><a id="a" href="/ventanas/acerca.html">About</a></li>
+|				<li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+|				<li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+|				<li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+|			    </ul>
+|			    <!-- <a id="b" href="#" class="action_btn1">Log-in</a>
+|			    <a id="b" href="#" class="action_btn2">Get into</a> -->
+|			    <div class="toggle_btn">
+|				<i class="fa-solid fa-bars"></i> 
+|			    </div>
+|			</div>
+|
+|			<div class="dropdown_menu">
+|			    
+|			    <li><a id="a" href="/ventanas/acerca.html">About</a></li>
+|			    <li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+|			    <li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+|			    <li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+|			    <!-- <li><a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a></li>
+|			    <li><a id="b" href="#" class="action_btn2">Get into</a></li> -->
+|			</div>
+|
+|		    </header>
+|
+|		    <section>
+|
+|			<div class="contenedor">
+|
+|			    <div class="formulario">
+|
+|				<form action="#">
+|				    <h2>Log-in</h2>
+|
+|				    <div class="input-contenedor">
+|				        <i class="fa-solid fa-envelope"></i>
+|				        <input type="email" required>
+|				        <label for="#">Email</label>
+|				    </div>
+|
+|				    <div class="input-contenedor">
+|				        <i class="fa-solid fa-lock"></i>
+|				        <input type="password" required>
+|				        <label for="#">Password</label>
+|				    </div>
+|
+|				    <div class="olvidar">
+|
+|				        <label for="#">
+|				            <input type="checkbox"> Recordar
+|				            <a href="#">Forgot the password</a>
+|				        </label>
+|
+|				    </div>
+|
+|				</form>
+|
+|				<div>
+|				    <button>Access</button>
+|				    <div class="registrar">
+|				        <p>I do not have an account.<a href="/ventanas/registro.html">Create Account</a></p>
+|				    </div>
+|				</div>
+|
+|			    </div>
+|
+|			</div>
+|
+|		    </section>
+|
+|		    <footer class="pie-pagina">
+|			<div class="grupo-1">
+|			    <div class="box">
+|				<figure>
+|				    <a href="#">
+|				        <i class="fa-solid fa-code" alt="Logo DT8"></i>
+|				        <!-- <img src="/img/code-solid.svg" alt="Logo de DT8"> -->
+|				    </a>
+|				</figure>
+|			    </div>
+|			    <div class="box">
+|				<h2>Developer Team 8</h2>
+|				<p>Specialists in software analysis and development, we transform 
+|				    ideas into innovative and high-quality technological solutions.</p>
+|			    </div>
+|			    <div class="box">
+|				<h2>Social Media</h2>
+|				<div class="red-social">
+|				    <a href="#" class="fa-brands fa-square-facebook"></a>
+|				    <a href="#" class="fa-brands fa-square-instagram"></a>
+|				    <a href="#" class="fa-brands fa-square-x-twitter"></a>
+|				    <a href="#" class="fa-brands fa-youtube"></a>
+|				</div>
+|			    </div>
+|			</div>
+|
+|			<div class="grupo-2">
+|			    <small>
+|				&copy; 2024 <b>Development Team 8</b> - All rights reserved.
+|			    </small>
+|			</div>
+|
+|		    </footer>
+|		    <script src="/js/menu.js"></script>
+|		   
+|		</body>
+|		</html>
+│   ├── productos.html
+|	  └── <!DOCTYPE html>
+|		<html lang="en">
+|		<head>
+|		    <meta charset="UTF-8">
+|		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|
+|		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+|		    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+|		    crossorigin="anonymous" referrerpolicy="no-referrer" />
+|
+|		    <link rel="stylesheet" href="/css/style_backround.css">
+|		    <link rel="stylesheet" href="/css/header.css">
+|		    <link rel="stylesheet" href="/css/footer.css">
+|		    <link rel="stylesheet" href="/css/productos.css ">
+|
+|
+|		    <title>VirtualBike</title>
+|
+|		    <style>
+|
+|			@import"/css/style_backround.css";
+|			@import"/css/log_in.css";
+|
+|		    </style>
+|		    
+|		</head>
+|		<body>
+|
+|		    <header>
+|			<div class="navbar">
+|			    <div class="logo"><a id="a" href="/index.html">VirtualBike</a></div>
+|			    <ul class="links">
+|				<li><a id="a" href="/ventanas/acerca.html">About</a></li>
+|				<li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+|				<li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+|				<li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+|			    </ul>
+|			    <a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a>
+|			    <a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a>
+|			    <div class="toggle_btn">
+|				<i class="fa-solid fa-bars"></i> 
+|			    </div>
+|			</div>
+|
+|			<div class="dropdown_menu">
+|			    
+|			    <li><a id="a" href="/ventanas/acerca.html">About</a></li>
+|			    <li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+|			    <li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+|			    <li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+|			    <li><a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a></li>
+|			    <li><a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a></li>
+|			</div>
+|
+|		    </header>
+|
+|		    <section>
+|			<div class="productos">
+|			    <h1>Products</h1>
+|			</div>
+|		    </section>
+|
+|		    <footer class="pie-pagina">
+|			<div class="grupo-1">
+|			    <div class="box">
+|				<figure>
+|				    <a href="#">
+|				        <i class="fa-solid fa-code" alt="Logo DT8"></i>
+|				        <!-- <img src="/img/code-solid.svg" alt="Logo de DT8"> -->
+|				    </a>
+|				</figure>
+|			    </div>
+|			    <div class="box">
+|				<h2>Developer Team 8</h2>
+|				<p>Specialists in software analysis and development, we transform 
+|				    ideas into innovative and high-quality technological solutions.</p>
+|			    </div>
+|			    <div class="box">
+|				<h2>Social Media</h2>
+|				<div class="red-social">
+|				    <a href="#" class="fa-brands fa-square-facebook"></a>
+|				    <a href="#" class="fa-brands fa-square-instagram"></a>
+|				    <a href="#" class="fa-brands fa-square-x-twitter"></a>
+|				    <a href="#" class="fa-brands fa-youtube"></a>
+|				</div>
+|			    </div>
+|			</div>
+|
+|			<div class="grupo-2">
+|			    <small>
+|				&copy; 2024 <b>Development Team 8</b> - All rights reserved.
+|			    </small>
+|			</div>
+|
+|		    </footer>
+|		    <script src="/js/menu.js"></script>
+|		   
+|		</body>
+|		</html>
+│   ├── registro.html
+|	  └── <!DOCTYPE html>
+		<html lang="en">
+		<head>
+		    <meta charset="UTF-8">
+		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+		    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+		    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		    <link rel="stylesheet" href="/css/style_backround.css">
+		    <link rel="stylesheet" href="/css/header.css">
+		    <link rel="stylesheet" href="/css/footer.css">
+		    <link rel="stylesheet" href="/css/contacto.css">
+		    <link rel="stylesheet" href="/css/registro.css">
+
+
+		    <title>VirtualBike</title>
+
+		    <style>
+
+			/* @import"/css/style_backround.css"; */
+			/* @import"/css/log_in.css"; */
+
+		    </style>
+		    
+		</head>
+		<body>
+
+		    <header>
+			<div class="navbar">
+			    <div class="logo"><a id="a" href="/index.html">VirtualBike</a></div>
+			    <ul class="links">
+				<li><a id="a"  href="/ventanas/acerca.html">About</a></li>
+				<li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+				<li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+				<li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+			    </ul>
+			    <a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a>
+			    <a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a>
+			    <div class="toggle_btn">
+				<i class="fa-solid fa-bars"></i> 
+			    </div>
+			</div>
+
+			<div class="dropdown_menu">
+			    
+			    <li><a id="a" href="/ventanas/acerca.html">About</a></li>
+			    <li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+			    <li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+			    <li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+			    <li><a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a></li>
+			    <li><a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a></li>
+			</div>
+
+		    </header>
+
+		    <section>
+			<div class="contenedor">
+			    <h2>Registro</h2>
+			    <form action="#" method="POST">
+				<!-- Nombre primario -->
+				<div class="input-contenedor">
+				    <label for="nombre1">Nombre Primario</label>
+				    <input type="text" id="nombre1" name="nombre1" required>
+				</div>
+				<!-- Nombre secundario (opcional) -->
+				<div class="input-contenedor">
+				    <label for="nombre2">Nombre Secundario (Opcional)</label>
+				    <input type="text" id="nombre2" name="nombre2">
+				</div>
+				<!-- Apellido primario -->
+				<div class="input-contenedor">
+				    <label for="apellido1">Apellido Primario</label>
+				    <input type="text" id="apellido1" name="apellido1" required>
+				</div>
+				<!-- Apellido secundario (opcional) -->
+				<div class="input-contenedor">
+				    <label for="apellido2">Apellido Secundario (Opcional)</label>
+				    <input type="text" id="apellido2" name="apellido2">
+				</div>
+				<!-- Correo electrónico -->
+				<div class="input-contenedor">
+				    <label for="email">Correo Electrónico</label>
+				    <input type="email" id="email" name="email" required>
+				</div>
+				<!-- Verificación de correo electrónico -->
+				<div class="input-contenedor">
+				    <label for="email-confirm">Confirmar Correo Electrónico</label>
+				    <input type="email" id="email-confirm" name="email-confirm" required>
+				</div>
+				<!-- Nombre de usuario -->
+				<div class="input-contenedor">
+				    <label for="username">Username</label>
+				    <input type="text" id="username" name="username" required>
+				</div>
+				<!-- Departamento -->
+				<div class="input-contenedor">
+				    <label for="departamento">Departamento</label>
+				    <select id="departamento" name="departamento" required>
+				        <option value="">Seleccionar Departamento</option>
+				        <option value="Antioquia">Antioquia</option>
+				        <option value="Bogotá">Bogotá</option>
+				        <!-- Agregar todos los departamentos de Colombia -->
+				    </select>
+				</div>
+				<!-- Ciudad -->
+				<div class="input-contenedor">
+				    <label for="ciudad">Ciudad</label>
+				    <select id="ciudad" name="ciudad" required>
+				        <option value="">Seleccionar Ciudad</option>
+				        <!-- Opciones dinámicas según el departamento seleccionado -->
+				    </select>
+				</div>
+				<!-- Dirección de domicilio -->
+				<div class="input-contenedor">
+				    <label for="direccion">Dirección de Domicilio</label>
+				    <input type="text" id="direccion" name="direccion" required>
+				</div>
+				<!-- Indicativo del país y número de celular -->
+				<div class="input-contenedor">
+				    <label for="telefono">Número de Celular</label>
+				    <div class="telefono-input">
+				        <input type="text" id="indicativo" name="indicativo" placeholder="+57" required>
+				        <input type="text" id="celular" name="celular" required>
+				    </div>
+				</div>
+				<!-- Tratamiento de datos -->
+				<div class="checkbox-contenedor">
+				    <input type="checkbox" id="tratamiento" name="tratamiento" required>
+				    <label for="tratamiento">Acepto el tratamiento de datos</label>
+				</div>
+				<!-- Envío de promociones a correo -->
+				<div class="checkbox-contenedor">
+				    <input type="checkbox" id="promociones-correo" name="promociones-correo">
+				    <label for="promociones-correo">Acepto recibir promociones por correo</label>
+				</div>
+				<!-- Envío de promociones a celular -->
+				<div class="checkbox-contenedor">
+				    <input type="checkbox" id="promociones-sms" name="promociones-sms">
+				    <label for="promociones-sms">Acepto recibir promociones por SMS</label>
+				</div>
+				<!-- Botón de Guardar -->
+				<button type="submit" id="guardar" disabled>Guardar</button>
+			    </form>
+			</div>
+		    </section>
+
+		    <footer class="pie-pagina">
+			<div class="grupo-1">
+			    <div class="box">
+				<figure>
+				    <a href="#">
+				        <i class="fa-solid fa-code" alt="Logo DT8"></i>
+				        <!-- <img src="/img/code-solid.svg" alt="Logo de DT8"> -->
+				    </a>
+				</figure>
+			    </div>
+			    <div class="box">
+				<h2>Developer Team 8</h2>
+				<p>Specialists in software analysis and development, we transform 
+				    ideas into innovative and high-quality technological solutions.</p>
+			    </div>
+			    <div class="box">
+				<h2>Social Media</h2>
+				<div class="red-social">
+				    <a href="#" class="fa-brands fa-square-facebook"></a>
+				    <a href="#" class="fa-brands fa-square-instagram"></a>
+				    <a href="#" class="fa-brands fa-square-x-twitter"></a>
+				    <a href="#" class="fa-brands fa-youtube"></a>
+				</div>
+			    </div>
+			</div>
+
+			<div class="grupo-2">
+			    <small>
+				&copy; 2024 <b>Development Team 8</b> - All rights reserved.
+			    </small>
+			</div>
+
+		    </footer>
+		    <script src="/js/menu.js"></script>
+		    <script src="/js/registro.js"></script>
+		</body>
+		</html>
+│   └── servicios.html
+|	  └── <!DOCTYPE html>
+|		<html lang="en">
+|		<head>
+|		    <meta charset="UTF-8">
+|		    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+|
+|		    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+|		    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+|		    crossorigin="anonymous" referrerpolicy="no-referrer" />
+|
+|		    <link rel="stylesheet" href="/css/style_backround.css">
+|		    <link rel="stylesheet" href="/css/header.css">
+|		    <link rel="stylesheet" href="/css/footer.css">
+|		    <link rel="stylesheet" href="/css/servicios.css">
+|
+|
+|		    <title>VirtualBike</title>
+|
+|		    <style>
+|
+|			/* @import"/css/style_backround.css"; */
+|			@import"/css/log_in.css";
+|
+|		    </style>
+|		    
+|		</head>
+|		<body>
+|
+|		    <header>
+|			<div class="navbar">
+|			    <div class="logo"><a id="a" href="/index.html">VirtualBike</a></div>
+|			    <ul class="links">
+|				<li><a id="a"  href="/ventanas/acerca.html">About</a></li>
+|				<li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+|				<li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+|				<li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+|			    </ul>
+|			    <a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a>
+|			    <a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a>
+|			    <div class="toggle_btn">
+|				<i class="fa-solid fa-bars"></i> 
+|			    </div>
+|			</div>
+|
+|			<div class="dropdown_menu">
+|			    
+|			    <li><a id="a" href="/ventanas/acerca.html">About</a></li>
+|			    <li><a id="a"  href="/ventanas/productos.html">Products</a></li>
+|			    <li><a id="a"  href="/ventanas/servicios.html">Services</a></li>
+|			    <li><a id="a"  href="/ventanas/contacto.html">Contact</a></li>
+|			    <li><a id="b" href="/ventanas/log_in.html" class="action_btn1">Log-in</a></li>
+|			    <li><a id="b" href="/ventanas/registro.html" class="action_btn2">Get into</a></li>
+|			</div>
+|
+|		    </header>
+|
+|		    <section>
+|			<div class="servicios">
+|			    <h1>Services</h1>
+|			</div>
+|		    </section>
+|
+|		    <footer class="pie-pagina">
+|			<div class="grupo-1">
+|			    <div class="box">
+|				<figure>
+|				    <a href="#">
+|				        <i class="fa-solid fa-code" alt="Logo DT8"></i>
+|				        <!-- <img src="/img/code-solid.svg" alt="Logo de DT8"> -->
+|				    </a>
+|				</figure>
+|			    </div>
+|			    <div class="box">
+|				<h2>Developer Team 8</h2>
+|				<p>Specialists in software analysis and development, we transform 
+|				    ideas into innovative and high-quality technological solutions.</p>
+|			    </div>
+|			    <div class="box">
+|				<h2>Social Media</h2>
+|				<div class="red-social">
+|				    <a href="#" class="fa-brands fa-square-facebook"></a>
+|				    <a href="#" class="fa-brands fa-square-instagram"></a>
+|				    <a href="#" class="fa-brands fa-square-x-twitter"></a>
+|				    <a href="#" class="fa-brands fa-youtube"></a>
+|				</div>
+|			    </div>
+|			</div>
+|
+|			<div class="grupo-2">
+|			    <small>
+|				&copy; 2024 <b>Development Team 8</b> - All rights reserved.
+|			    </small>
+|			</div>
+|
+|		    </footer>
+|		    <script src="/js/menu.js"></script>
+|		   
+|		</body>
+|		</html>
+
+
+

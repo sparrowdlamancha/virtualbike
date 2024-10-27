@@ -1,3 +1,4 @@
+/*PIE DE PAGINA DE VENTANAS*/
 *{
     margin: 0;
     padding: 0;
@@ -7,17 +8,16 @@
 footer{
 
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    position: relative; /* Cambiado de absolute a relative */
+    margin-top: auto;
+    /*background-color: rgba(0, 0, 0, 0.8); /* Fondo opcional para contraste */
 }
 
 .pie-pagina{
 
     width: 100%;
     backdrop-filter: blur(15px);
-    z-index: 1000;
-   
-    
+    z-index: 1000;  
 }
 
 .pie-pagina .grupo-1{

@@ -1,0 +1,151 @@
+/* General header styling */
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px; /* Ajusta este valor según sea necesario */
+}
+
+
+/*AJUSTE DE TAMAÑO, ESPACIO Y MARGEN DEL LOGO*/
+.navbar .logo a {
+    position: relative;
+    top: 20px;/* Ajusta el valor para bajar el logo */
+    font-size: 2.2rem;/*Tamaño del Logo*/
+    font-weight: bold;
+    color: blanchedalmond;
+    margin-right: 2.2rem; /* Ajusta este valor para aumentar o reducir el espacio */
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem; /* Ajusta este valor para el espacio entre links */
+    margin-top: 50px; /* Ajusta este valor para bajar la navbar */
+}
+
+.navbar .links a {
+    text-decoration: none;
+    color: blanchedalmond;
+    font-size: 1.5rem; /*Tamaño de los links*/
+    margin-top: 5px; /* Baja los links individualmente */
+}
+
+.navbar .links a:hover {
+    color: orange;
+}
+
+/* Menu toggle button */
+.navbar .toggle_btn {
+    color: blanchedalmond;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Action buttons */
+.action_btn1, .action_btn2 {
+    background-color: orange;
+    color: #1b1a2f;
+    padding: 0.5rem 2rem;/* Ajusta el padding para cambiar el tamaño del botón */
+    align-items: center;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;/* Cambia este valor para ajustar el tamaño del texto en los botones */
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+    margin-left: 1rem; /* Ajusta el valor para aumentar o reducir el espacio entre los botones */
+    margin-top: 50px; /* Ajusta el valor para bajar los botones */
+}
+
+.action_btn1:hover, .action_btn2:hover {
+    scale: 1.05;
+    color: blanchedalmond;
+}
+
+.action_btn1:active, .action_btn2:active {
+    scale: 0.95;
+}
+
+#b:hover {
+    color: white;
+}
+
+/* Dropdown menu */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+.dropdown_menu.open {
+    height: auto; /* Ajusta la altura según el contenido */
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn1, .dropdown_menu .action_btn2 {
+    width: 90%; /* Ajusta según sea necesario para que el botón no se recorte */
+    margin: 0.5rem 5%; /* Centrará los botones y evitará el recorte */
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+    .navbar .links,
+    .navbar .action_btn1, .action_btn2 {
+        display: none;
+        /*width: 100%; /* Ajusta el ancho para que encajen bien */
+    }
+    .navbar .toggle_btn {
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;/* Asegura que los botones se muestren */
+        /*width: 100%; /* Asegura el ancho completo en pantalla pequeña */
+        
+    }
+    .action_btn1, .action_btn2 {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+    .action_btn2 {
+        margin-left: 0.5rem;
+    }
+    .navbar .links a {
+        font-size: 1.5rem; /* Tamaño más pequeño para pantallas más chicas */
+    }
+}
+
+@media (max-width: 557px) {
+    .dropdown_menu {
+        width: 100%; /* Ancho completo para centrar en pantallas pequeñas */
+        left: 2rem;
+        width: unset;
+    }
+}

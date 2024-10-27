@@ -8,7 +8,8 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- <link rel="stylesheet" href="/css/style_backround.css"> -->
+    <link rel="stylesheet" href="/css/style_backround.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/contacto.css">
     <link rel="stylesheet" href="/css/registro.css">
@@ -18,8 +19,8 @@
 
     <style>
 
-        @import"/css/style_backround.css";
-        @import"/css/log_in.css";
+        /* @import"/css/style_backround.css"; */
+        /* @import"/css/log_in.css"; */
 
     </style>
     
@@ -54,16 +55,94 @@
 
     </header>
 
-    <section id="forma" class="container-re">
-        <header>Registration form</header>
-        <form action="#" class="form"></form>
-        <div class="input-box">
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter full name">
-        </div>
-        <div class="input-box">
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter full name">
+    <section>
+        <div class="contenedor">
+            <h2>Registro</h2>
+            <form action="#" method="POST">
+                <!-- Nombre primario -->
+                <div class="input-contenedor">
+                    <label for="nombre1">Nombre Primario</label>
+                    <input type="text" id="nombre1" name="nombre1" required>
+                </div>
+                <!-- Nombre secundario (opcional) -->
+                <div class="input-contenedor">
+                    <label for="nombre2">Nombre Secundario (Opcional)</label>
+                    <input type="text" id="nombre2" name="nombre2">
+                </div>
+                <!-- Apellido primario -->
+                <div class="input-contenedor">
+                    <label for="apellido1">Apellido Primario</label>
+                    <input type="text" id="apellido1" name="apellido1" required>
+                </div>
+                <!-- Apellido secundario (opcional) -->
+                <div class="input-contenedor">
+                    <label for="apellido2">Apellido Secundario (Opcional)</label>
+                    <input type="text" id="apellido2" name="apellido2">
+                </div>
+                <!-- Correo electrónico -->
+                <div class="input-contenedor">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <!-- Verificación de correo electrónico -->
+                <div class="input-contenedor">
+                    <label for="email-confirm">Confirmar Correo Electrónico</label>
+                    <input type="email" id="email-confirm" name="email-confirm" required>
+                </div>
+                <!-- Nombre de usuario -->
+                <div class="input-contenedor">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <!-- Departamento -->
+                <div class="input-contenedor">
+                    <label for="departamento">Departamento</label>
+                    <select id="departamento" name="departamento" required>
+                        <option value="">Seleccionar Departamento</option>
+                        <option value="Antioquia">Antioquia</option>
+                        <option value="Bogotá">Bogotá</option>
+                        <!-- Agregar todos los departamentos de Colombia -->
+                    </select>
+                </div>
+                <!-- Ciudad -->
+                <div class="input-contenedor">
+                    <label for="ciudad">Ciudad</label>
+                    <select id="ciudad" name="ciudad" required>
+                        <option value="">Seleccionar Ciudad</option>
+                        <!-- Opciones dinámicas según el departamento seleccionado -->
+                    </select>
+                </div>
+                <!-- Dirección de domicilio -->
+                <div class="input-contenedor">
+                    <label for="direccion">Dirección de Domicilio</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                <!-- Indicativo del país y número de celular -->
+                <div class="input-contenedor">
+                    <label for="telefono">Número de Celular</label>
+                    <div class="telefono-input">
+                        <input type="text" id="indicativo" name="indicativo" placeholder="+57" required>
+                        <input type="text" id="celular" name="celular" required>
+                    </div>
+                </div>
+                <!-- Tratamiento de datos -->
+                <div class="checkbox-contenedor">
+                    <input type="checkbox" id="tratamiento" name="tratamiento" required>
+                    <label for="tratamiento">Acepto el tratamiento de datos</label>
+                </div>
+                <!-- Envío de promociones a correo -->
+                <div class="checkbox-contenedor">
+                    <input type="checkbox" id="promociones-correo" name="promociones-correo">
+                    <label for="promociones-correo">Acepto recibir promociones por correo</label>
+                </div>
+                <!-- Envío de promociones a celular -->
+                <div class="checkbox-contenedor">
+                    <input type="checkbox" id="promociones-sms" name="promociones-sms">
+                    <label for="promociones-sms">Acepto recibir promociones por SMS</label>
+                </div>
+                <!-- Botón de Guardar -->
+                <button type="submit" id="guardar" disabled>Guardar</button>
+            </form>
         </div>
     </section>
 
@@ -101,5 +180,6 @@
 
     </footer>
     <script src="/js/menu.js"></script>
+    <script src="/js/registro.js"></script>
 </body>
 </html>
