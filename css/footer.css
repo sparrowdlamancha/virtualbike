@@ -5,19 +5,25 @@
     box-sizing: border-box;
 }
 
-footer{
-
+footer {
     width: 100%;
-    position: relative; /* Cambiado de absolute a relative */
-    margin-top: auto;
-    /*background-color: rgba(0, 0, 0, 0.8); /* Fondo opcional para contraste */
+    position: relative; /* Cambiado de fixed a relative */
+    margin-top: 20px; /* Opcional: añade un margen para separarlo del contenido */
 }
+/* footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    margin-top: 0; 
+} */
 
 .pie-pagina{
 
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.561);
     backdrop-filter: blur(15px);
-    z-index: 1000;  
+    z-index: 100;  
 }
 
 .pie-pagina .grupo-1{
