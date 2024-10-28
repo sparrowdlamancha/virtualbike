@@ -483,11 +483,16 @@
 		    background-position: center;
 		    color: #fff;
 		}
-
+		/* Estructura de tres columnas para el formulario */
+		.contenedor form {
+		    display: grid;
+		    grid-template-columns: repeat(3, 1fr);
+		    gap: 20px;
+		}
 		/* Contenedor principal */
 		.contenedor {
-		    width: 100%;
-		    max-width: 500px;
+		    margin-top: 50px;
+		    max-width: 200%; /* Ajusta el ancho para distribuir mejor */
 		    padding: 2rem;
 		    border-radius: 15px;
 		    backdrop-filter: blur(15px);
@@ -534,10 +539,11 @@
 		    transition: all 0.3s;
 		}
 
-		.input-contenedor input:focus~label,
-		.input-contenedor input:not(:placeholder-shown)~label,
-		.input-contenedor select:focus~label,
-		.input-contenedor select:not([value=""])~label {
+		/* Movimiento de la etiqueta cuando el campo está lleno o en foco */
+		.input-contenedor input:focus ~ label,
+		.input-contenedor input:not(:placeholder-shown) ~ label,
+		.input-contenedor select:focus ~ label,
+		.input-contenedor select:not([value=""]) ~ label {
 		    top: -10px;
 		    font-size: 0.85rem;
 		    color: orange;
@@ -585,6 +591,7 @@
 		button:hover:enabled {
 		    background-color: darkorange;
 		}
+
 
 
 │   ├── servicios.css

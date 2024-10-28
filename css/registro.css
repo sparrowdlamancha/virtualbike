@@ -27,11 +27,16 @@ section {
     background-position: center;
     color: #fff;
 }
-
+/* Estructura de tres columnas para el formulario */
+.contenedor form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 /* Contenedor principal */
 .contenedor {
-    width: 100%;
-    max-width: 500px;
+    margin-top: 50px;
+    max-width: 200%; /* Ajusta el ancho para distribuir mejor */
     padding: 2rem;
     border-radius: 15px;
     backdrop-filter: blur(15px);
@@ -75,18 +80,24 @@ section {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.7);
     pointer-events: none;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 
-.input-contenedor input:focus~label,
-.input-contenedor input:not(:placeholder-shown)~label,
-.input-contenedor select:focus~label,
-.input-contenedor select:not([value=""])~label {
+.input-contenedor label.active {
     top: -10px;
     font-size: 0.85rem;
     color: orange;
 }
 
+/* Movimiento de la etiqueta cuando el campo está lleno o en foco */
+.input-contenedor input:focus ~ label,
+.input-contenedor input:valid ~ label,
+.input-contenedor select:focus ~ label,
+.input-contenedor select:valid ~ label {
+    top: -10px;
+    font-size: 0.85rem;
+    color: orange;
+}
 /* Estilo del número de celular */
 .telefono-input {
     display: flex;
