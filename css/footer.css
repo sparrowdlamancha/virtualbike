@@ -21,7 +21,7 @@ footer {
 .pie-pagina{
 
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.561);
+    /* background-color: rgba(0, 0, 0, 0.561); */
     backdrop-filter: blur(15px);
     z-index: 100;  
 }
