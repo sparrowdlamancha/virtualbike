@@ -1,121 +1,129 @@
 /* Reset general */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y border en el tamaño total del elemento */
+    font-family: "Poppins", sans-serif; /* Aplica la fuente Poppins a todo el documento */
 }
 
 /* Estructura principal del contenedor de contacto */
 .contenedor-contacto {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 90%; /* Ocupa el 90% del ancho de la pantalla */
-    margin: 70px auto; /* Añade margen superior para separarlo del header */
-    padding: 20px;
-    backdrop-filter: blur(15px);
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    box-shadow: 0 0 15px rgba(237, 234, 234, 0.5);
-    gap: 20px;
+    display: flex; /* Organiza el contenido en un contenedor flexible */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si es necesario */
+    max-width: 90%; /* Establece el ancho máximo en el 90% del contenedor padre */
+    margin: 70px auto; /* Añade margen superior y centra horizontalmente */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    backdrop-filter: blur(15px); /* Aplica un efecto de desenfoque de fondo */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(237, 234, 234, 0.5); /* Sombra suave */
+    gap: 20px; /* Espacio entre los elementos hijos */
 }
 
 /* Estilo de las columnas */
 .columna {
-    flex: 1;
-    min-width: 45%; /* Ocupa aproximadamente el 45% para permitir dos columnas paralelas */
-    padding: 40px;
-    height: 800px; /* Incrementa la altura de las columnas */
-    backdrop-filter: blur(15px);
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    flex: 1; /* Permite que cada columna tome espacio disponible en la fila */
+    min-width: 45%; /* Establece el ancho mínimo en el 45% */
+    padding: 40px; /* Espacio interno en cada columna */
+    height: 800px; /* Altura fija de cada columna */
+    backdrop-filter: blur(15px); /* Efecto de desenfoque para fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la columna */
+    text-align: center; /* Centra el texto en la columna */
 }
 
 /* Estilo del título de cada columna */
 .columna h2 {
-    font-size: 1.5rem;
-    color: orange;
-    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Tamaño de fuente del título */
+    color: orange; /* Color del texto */
+    margin-bottom: 1rem; /* Espacio debajo del título */
 }
 
 /* Estilo de los campos de entrada en PQR */
-.input-pqr {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.input-pqr, .input-area {
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    padding: 10px; /* Espacio interno del campo */
+    margin: 10px 0; /* Espacio arriba y abajo de cada campo */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
 }
 
 /* Estilo del área de texto en PQR */
 .columna textarea {
-    width: 100%;
-    height: 400px; /* Se reduce la altura para acomodar los otros campos */
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
+    width: 100%; /* Ancho completo */
+    height: 280px; /* Altura ajustada para acomodar otros campos */
+    margin-top: 10px; /* Espacio superior */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    resize: vertical; /* Permite que el usuario ajuste la altura */
 }
 
 /* Estilo del botón de PQR */
 .columna button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #333;
-    backdrop-filter: blur(15px);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-top: 10px; /* Espacio superior */
+    padding: 10px 20px; /* Espacio interno arriba/abajo y laterales */
+    background-color: #dd990f; /* Fondo gris oscuro */
+    backdrop-filter: blur(15px); /* Efecto de desenfoque */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a puntero al pasar sobre el botón */
 }
 
 .columna button:hover {
-    background-color: #dd990f;
+    background-color: #333; /* Color de fondo en hover */
 }
 
 /* Botón de WhatsApp */
 .whatsapp-btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #25D366; /* Color original del botón */
-    color: white;
-    border-radius: 8px;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+    margin-top: 50px; /* Espacio superior */
+    display: inline-block; /* Hace que el botón ocupe solo el espacio necesario */
+    padding: 10px 15px; /* Espacio interno */
+    background-color: #25D366; /* Color verde original del botón */
+    color: white; /* Color del texto */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 30px; /* Tamaño de la fuente */
+    font-weight: bold; /* Fuente en negrita */
+    text-align: center; /* Centra el texto */
+    text-decoration: none; /* Quita subrayado */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color al hacer hover */
+}
+
+/* Color de texto en la columna */
+.columna p {
+    color: white; /* Color de texto blanco */
+    font-weight: bold; /* Texto en negrita */
 }
 
 /* Efecto hover para el botón de WhatsApp */
 .whatsapp-btn:hover {
-    background-color: #dd990f; /* Nuevo color al pasar el cursor */
-    color: white;
+    background-color: #dd990f; /* Cambia el color de fondo al pasar el cursor */
+    color: white; /* Color del texto */
 }
 
 .whatsapp-btn i {
-    margin-right: 8px;
+    margin-right: 8px; /* Espacio a la derecha del ícono de WhatsApp */
 }
 
 /* Estilo para la caja de texto del mensaje de WhatsApp */
 #mensajeWhatsApp {
-    width: 100%;
-    height: 150px;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
+    width: 100%; /* Ancho completo */
+    height: 150px; /* Altura de la caja de texto */
+    margin-top: 10px; /* Espacio superior */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+    resize: vertical; /* Permite ajustar altura */
 }
+
 /* Ajustes para pantallas más pequeñas */
 @media screen and (max-width: 768px) {
     .contenedor-contacto {
-        flex-direction: column; /* En pantallas pequeñas, se muestran en una sola columna */
+        flex-direction: column; /* Pone las columnas en una sola fila vertical */
     }
 
     .columna {
-        min-width: 100%;
+        min-width: 100%; /* Ancho completo en columnas individuales */
     }
 }
