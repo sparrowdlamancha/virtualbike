@@ -56,14 +56,36 @@
 
 
     <div class="contacto">
-        <!-- Contenedor de contacto dividido en dos columnas -->
-        <div class="contenedor-contacto">
-            <!-- Columna PQR -->
-            <div class="columna">
-                <h2>Peticiones, Quejas y Reclamos (PQR)</h2>
-                <textarea placeholder="Escribe aquí tus peticiones, quejas o reclamos..."></textarea>
-                <button type="button">Enviar PQR</button>
-            </div>
+       <!-- Contenedor de contacto dividido en dos columnas -->
+    <div class="contenedor-contacto">
+        <!-- Columna PQR -->
+        <div class="columna">
+            <h2>Peticiones, Quejas y Reclamos (PQR)</h2>
+            
+            <!-- Campo de Nombre y Apellido -->
+            <input type="text" placeholder="Nombre y Apellido" class="input-pqr" />
+
+            <!-- Campo de Correo -->
+            <input type="email" placeholder="Correo" class="input-pqr" />
+
+            <!-- Lista desplegable para seleccionar tipo de solicitud -->
+            <select class="input-pqr">
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="felicitacion">Felicitación</option>
+                <option value="pregunta">Pregunta</option>
+                <option value="queja">Queja</option>
+                <option value="reclamo">Reclamo</option>
+            </select>
+
+            <!-- Campo de Ciudad -->
+            <input type="text" placeholder="Ciudad" class="input-pqr" />
+
+            <!-- Área de texto para el mensaje PQR -->
+            <textarea placeholder="Escribe aquí tus peticiones, quejas o reclamos..."></textarea>
+            
+            <!-- Botón de Enviar PQR -->
+            <button type="button">Enviar PQR</button>
+        </div>
     
             <div class="columna">
                 <h2>Contáctanos por WhatsApp</h2>
