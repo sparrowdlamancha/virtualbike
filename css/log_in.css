@@ -1,56 +1,65 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
-
-*{
-
-    /* font-family: "Orbitron", sans-serif; */
+* {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
-section{
-    position: absolute;
+body {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 70vh;
-    
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+    margin: 0;
 }
 
-.contenedor{
+.log {
+    display: flex; /* Organiza el contenido en un contenedor flexible */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si es necesario */
+    max-width: 90%; /* Establece el ancho máximo en el 90% del contenedor padre */
+    margin: 70px auto; /* Añade margen superior y centra horizontalmente */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    /*backdrop-filter: blur(15px); /* Aplica un efecto de desenfoque de fondo */
+    /*background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente */
+    border-radius: 15px; /* Bordes redondeados */
+        box-shadow: 0 0 15px rgba(237, 234, 234, 0.5); /* Sombra suave */
+    gap: 20px; /* Espacio entre los elementos hijos */
+    margin-top: 10%;
+}
 
+.contenedor {
     position: relative;
-    width: 500px;
-    border: 2px solid rgb(255, 255, 255, 0.6);
+    width: 100%;
+    max-width: 500px; /* Ancho máximo */
+    height: auto;
+    min-height: 450px; /* Altura mínima */
+    padding: 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     backdrop-filter: blur(15px);
-    height: 450px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* box-shadow: 0 0 15px rgba(237, 234, 234, 0.5); */
 }
 
-.contenedor h2{
-
+.contenedor h2 {
     font-size: 3.2rem;
     color: #fff;
     text-align: center;
 }
 
-.input-contenedor{
-
+.input-contenedor {
     position: relative;
     margin: 30px 0;
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     border-bottom: 2px solid #fff;
 }
 
-.input-contenedor label{
-
+.input-contenedor label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -62,26 +71,22 @@ section{
     font-weight: bold;
 }
 
-input:focus~label,
-input:valid~label{
-
+input:focus ~ label,
+input:valid ~ label {
     top: -5px;
 }
 
-.input-contenedor input{
-
+.input-contenedor input {
     width: 100%;
     height: 50px;
     background-color: transparent;
     border: none;
     outline: none;
     font-size: 1rem;
-    padding: - 35px 0 5px;
     color: #fff;
 }
 
-.input-contenedor i{
-
+.input-contenedor i {
     position: absolute;
     color: #fff;
     font-size: 1.6rem;
@@ -89,8 +94,7 @@ input:valid~label{
     right: 8px;
 }
 
-.olvidar{
-
+.olvidar {
     margin: -15px 0 15px;
     font-size: 0.9rem;
     color: #fff;
@@ -98,26 +102,22 @@ input:valid~label{
     justify-content: center;
 }
 
-.olvidar label input{
-
+.olvidar label input {
     margin: 3px;
 }
 
-.olvidar label a{
-
+.olvidar label a {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
     font-size: 0.9rem;
 }
 
-.olvidar label a:hover{
-
+.olvidar label a:hover {
     text-decoration: underline;
 }
 
-button{
-
+button {
     width: 100%;
     height: 45px;
     border-radius: 40px;
@@ -130,30 +130,24 @@ button{
     transition: 0.4s;
 }
 
-button:hover{
-
+button:hover {
     opacity: 0.9;
 }
 
-.registrar{
-
+.registrar {
     font-size: .8rem;
     color: #fff;
     text-align: center;
     margin: 20px 0 10px;
 }
 
-.registrar p a{
-
+.registrar p a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
     transition: .3s;
 }
 
-.registrar p a:hover{
-
+.registrar p a:hover {
     text-decoration: underline;
 }
-
-    

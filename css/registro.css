@@ -22,7 +22,7 @@ section {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url('fondo.jpg');
+    /* background: linear-gradient(rgba(5, 7, 12, 0.5), rgba(5, 7, 12, 0.5)), url('fondo.jpg'); */
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -41,7 +41,6 @@ section {
     padding: 2rem;
     border-radius: 15px;
     backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.1);
     text-align: center;
     box-shadow: 0 0 15px rgba(237, 234, 234, 0.5);
 }
