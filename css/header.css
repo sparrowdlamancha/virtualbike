@@ -5,14 +5,14 @@ header {
 }
 
 .navbar {
-    width: 100%;
+    width: 50%;
     height: 60px;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 10px; /* Ajusta este valor según sea necesario */
+    margin-top: 30px; /* Ajusta este valor según sea necesario */
 }
 
 
@@ -36,7 +36,14 @@ header {
     text-decoration: none;
     color: blanchedalmond;
     font-size: 1.5rem; /*Tamaño de los links*/
-    margin-top: 5px; /* Baja los links individualmente */
+    margin-top: 0px; /* Baja los links individualmente */
+    white-space: nowrap; /* Esto evitará que el texto se divida en varias líneas */
+}
+
+/*Función pra  subrayar el link en el cual se encuentra el usuario*/
+.navbar .links a.active {
+    text-decoration: underline; /* Subraya el enlace activo */
+    color: orange; /* O puedes cambiar el color si quieres */
 }
 
 .navbar .links a:hover {
@@ -49,6 +56,7 @@ header {
     font-size: 2rem;
     cursor: pointer;
     display: none;
+    
 }
 
 /* Action buttons */
@@ -66,6 +74,7 @@ header {
     transition: scale 0.2 ease;
     margin-left: 1rem; /* Ajusta el valor para aumentar o reducir el espacio entre los botones */
     margin-top: 50px; /* Ajusta el valor para bajar los botones */
+    white-space: nowrap; /* Esto evita que "Log-in" se divida en dos líneas */
 }
 
 .action_btn1:hover, .action_btn2:hover {
