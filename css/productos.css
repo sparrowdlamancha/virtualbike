@@ -1,14 +1,151 @@
-*{
+/* productos.css */
 
-   
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Estilos generales para el contenedor de productos */
+#productos {
+    margin-top: 60px;
+    padding: 20px; /* Agrega un margen interior alrededor del contenedor para separar el contenido de los bordes */
+    display: flex; /* Usa flexbox para manejar la alineación de elementos */
+    flex-direction: column; /* Organiza los elementos dentro de este contenedor en una columna */
+    align-items: center; /* Centra horizontalmente los elementos hijos dentro del contenedor */
+    /* backdrop-filter: blur(15px); */
+    border-radius: 5%;
+    box-shadow: 15px;
+    /*background-color: #f7f2f2; /* Define un color de fondo claro para la sección de productos */
 }
 
-.productos h1{
+/* Estilo para la sección de productos (e.g., Bicicletas, Accesorios) */
+.producto-seccion {
+    width: 90%; /* Ajusta el ancho al 90% del contenedor principal */
+    max-width: 2200px; /* Ancho máximo para pantallas grandes */
+    margin: 20px auto; /* Centra la sección horizontalmente y agrega margen superior e inferior */
+    padding: 20px; /* Espacio interno alrededor del contenedor de cada sección */
+    /*border: 1px solid #ddd; /* Opcional: Agrega un borde ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    /* backdrop-filter: blur(15px); */
+    /*box-shadow: 0 4px 8px rgba(194, 152, 25, 0.657); /* Sombra para dar efecto de profundidad */
+}
 
-    color: #fff;
-    font-size: 200px;
+/* Estilo para cada tarjeta de producto individual */
+.producto-item {
+    backdrop-filter: blur(15px);
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(163, 152, 152, 0.573); /* Sombra para profundidad */
+    width: 600px; /* Ajusta el ancho de la tarjeta */
+    height: 800px; /* Ajusta el alto de la tarjeta */
+    padding: 25px; /* Espacio interno dentro de la tarjeta */
+    text-align: center; /* Centra el contenido de la tarjeta */
+    transition: transform 0.3s; /* Transición en transformaciones */
+    overflow: hidden; /* Oculta el contenido que sobrepasa el tamaño de la tarjeta */
+}
+
+/* Contenedor para la lista de productos dentro de una sección */
+.producto-lista {
+    display: flex; /* Usa flexbox para organizar los elementos en filas */
+    flex-wrap: wrap; /* Permite que los productos ocupen varias filas si no caben en una sola */
+    gap: 50px; /* Espacio entre los elementos de la lista para una separación visual */
+    justify-content: center; /* Centra los elementos de la lista dentro del contenedor */
+}
+
+
+/* Estilo de los encabezados de cada sección de productos */
+.producto-seccion h2 {
+    color: orange; /* Color del texto (gris oscuro) para un buen contraste */
+    text-align: center; /* Centra el texto del título */
+    font-size: 1.8em; /* Define un tamaño de fuente grande para resaltar los encabezados */
+    margin-bottom: 10px; /* Espacio debajo del encabezado para separar el título del contenido */
+}
+
+
+
+/* Estilo para la imagen dentro de cada tarjeta de producto */
+.producto-item img {
+    margin-top: 20px;
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho de la tarjeta sin excederse */
+    border-radius: 8px; /* Hace coincidir las esquinas de la imagen con las de la tarjeta */
+    box-shadow: 4px 4px 10px rgba(211, 146, 6, 0.4); /* Sombra en la parte inferior y derecha */
+}
+
+/* Efecto de zoom al pasar el ratón sobre la tarjeta */
+.producto-item:hover {
+    transform: scale(1.05); /* Amplía la tarjeta un 5% al hacer hover, resaltándola */
+}
+
+/* Estilo para el título de cada producto dentro de la tarjeta */
+.producto-info h3 {
+    font-size: 2.2em; /* Tamaño de fuente ligeramente grande para destacar el nombre del producto */
+    margin: 30px 0; /* Espacio arriba y abajo del título para separar de otros elementos */
+    color: #ffffff; /* Color de texto gris medio para buena visibilidad */
+}
+
+/* Estilo para el texto descriptivo adicional de cada producto (e.g., proveedor, precio) */
+.producto-info p {
+    font-size: 2.em; /* Tamaño de fuente un poco más pequeño para detalles menos importantes */
+    color: #ffffff; /* Color de texto gris claro para contraste sutil */
+}
+
+/* Estilos para los botones "Me encanta" y "Compartir" */
+button.me-encanta {
+    background-color: rgb(201, 90, 90); /* Color de fondo rojo suave, atractivo y llamativo */
+    color: #ffffff; /* Color de texto blanco para contraste sobre el fondo rojo */
+    border: none; /* Quita cualquier borde por defecto de los botones */
+    border-radius: 5px; /* Esquinas redondeadas para un estilo moderno */
+    padding: 5px 10px; /* Margen interno para agrandar el área del botón */
+    margin-top: 10px; /* Espacio superior para separar el botón de otros elementos */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+    transition: background-color 0.3s; /* Transición suave en el color de fondo (usada en hover más adelante) */
+
+}   
+
+button.compartir {
+    background-color: orange; /* Color de fondo rojo suave, atractivo y llamativo */
+    color: #fff; /* Color de texto blanco para contraste sobre el fondo rojo */
+    border: none; /* Quita cualquier borde por defecto de los botones */
+    border-radius: 5px; /* Esquinas redondeadas para un estilo moderno */
+    padding: 5px 10px; /* Margen interno para agrandar el área del botón */
+    margin-top: 10px; /* Espacio superior para separar el botón de otros elementos */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+    font-weight: bold;
+    transition: background-color 0.3s; /* Transición suave en el color de fondo (usada en hover más adelante) */
+}
+
+button.carrito-btn {
+    background-color: orange; /* Color de fondo rojo suave, atractivo y llamativo */
+    color: #fff; /* Color de texto blanco para contraste sobre el fondo rojo */
+    border: none; /* Quita cualquier borde por defecto de los botones */
+    border-radius: 5px; /* Esquinas redondeadas para un estilo moderno */
+    padding: 5px 10px; /* Margen interno para agrandar el área del botón */
+    margin-top: 10px; /* Espacio superior para separar el botón de otros elementos */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+    font-weight: bold;
+    transition: background-color 0.3s; /* Transición suave en el color de fondo (usada en hover más adelante) */
+}
+
+/* Efecto hover para los botones */
+button.me-encanta:hover,
+button.compartir:hover, button.carrito-btn:hover {
+    background-color: #5b554a; /* Oscurece el color de fondo al pasar el ratón, dando un efecto de interacción */
+}
+
+/* Efecto visual cuando el botón "Me encanta" está activo */
+.me-encanta.active {
+    color: rgb(93, 5, 255); /* Cambia el color del botón al hacer clic */
+}
+
+/* Efecto visual cuando el botón "Agregar al carrito" está activo */
+.carrito-btn.added {
+    background-color: #4CAF50; /* Verde para indicar que está en el carrito */
+    color: white;
+}
+
+/* Ajustes responsivos para que las secciones se adapten a diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .producto-seccion {
+        width: 95%; /* En pantallas pequeñas, ocupa un mayor porcentaje de ancho */
+        padding: 15px; /* Reduce el padding para optimizar espacio en dispositivos pequeños */
+    }
+
+    .producto-item {
+        width: 100%; /* En pantallas pequeñas, cada producto ocupa todo el ancho del contenedor */
+        height: auto; /* Ajusta automáticamente el alto en pantallas pequeñas */
+    }
 }
