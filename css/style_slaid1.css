@@ -131,6 +131,21 @@ body{
     opacity: 0;
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
+.content a {
+    background-color: antiquewhite;
+    font-size: 1.2em;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards; 
+}
+
+.content a:hover {
+    background: rgb(203, 135, 32, 0.7);
+    color: aliceblue;
+}
 
 .content button{
 
