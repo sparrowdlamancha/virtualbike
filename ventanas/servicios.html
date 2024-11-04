@@ -54,11 +54,112 @@
 
     </header>
 
-    <section>
-        <div class="servicios">
-            <h1>Services</h1>
+    <!--Contenedor de las tres columnas -->
+    <div class="contenedor-servicio">
+        <!-- Contenedor de Agendamiento de citas -->
+        <div class="columna">
+            <h2>Agendamiento de cita Tecnica</h2>
+            <!-- Campo de Nombre y Apellido -->
+            <input type="text" placeholder="Nombre y Apellido" class="input-servicio" />
+
+            <!-- Campo de Correo -->
+            <input type="email" placeholder="Correo" class="input-servicio" />
+
+            <select class="input-ciudad">
+                <option value="" disabled selected>Selecciona la Ciudad</option>
+                <option value="bogota">Bogotá D.C.</option>
+                <option value="cali">Cali</option>
+                <option value="ibague">Ibague</option>
+                <option value="neiva">Neiva</option>
+            </select>
+
+            <select class="input-tecnico">
+                <option value="" disabled selected>Selecciona el Técnico</option>
+                <option value="juan">Juan Coronado</option>
+                <option value="ricardo">Ricardo Ramirez</option>
+                <option value="luis">Luis Cardozo</option>
+                <option value="alexis">Alexis Castro</option>
+            </select>
+
+
+            <!-- <label for="servicio">Servicio:</label> -->
+            <select class="input-servicio">
+                <option value="mantenimiento">Mantenimiento General</option>
+                <option value="preventivo">Mantenimiento Preventivo</option>
+                <option value="suspension-general">Mantenimiento de Suspensión General</option>
+                <option value="suspension-delantera">Mantenimiento de Suspensión Delantera</option>
+                <option value="rines">Enderezamiento de Rines</option>
+                <option value="cambio-partes">Cambio de Partes</option>
+            </select>
+
+            <div class="fecha-hora-contenedor">
+                <label for="fechaCita" class="label-fecha-hora">Fecha y Hora:</label>
+                <input type="datetime-local" id="fechaCita" class="input-fecha-hora" required>
+            </div>
+
+            <button type="button" onclick="agendarCita(1)">Agendar</button>
+
+            <div id="mensajeExito1" class="mensaje-exito">
+                Agendado con Éxito, espere su mensaje de confirmación
+            </div>
         </div>
-    </section>
+        <!-- Agendamiento de Acarreo -->
+        <div class="columna">
+            <h2>Agendamiento de Acarreo</h2>
+            <!-- Campo de Nombre y Apellido -->
+            <input type="text" placeholder="Nombre y Apellido" class="input-servicio" />
+
+            <!-- Campo de Correo -->
+            <input type="email" placeholder="Correo" class="input-servicio" />
+
+            <select class="input-ciudad">
+                <option value="" disabled selected>Selecciona la Ciudad</option>
+                <option value="felicitacion">Bogotá D.C.</option>
+                <option value="pregunta">Cali</option>
+                <option value="queja">Ibague</option>
+                <option value="reclamo">Neiva</option>
+            </select>
+
+            <input type="text" placeholder="Dirección" class="input-servicio" />
+
+            <input type="text" placeholder="Telefono" class="input-servicio" />
+
+            <div class="fecha-hora-contenedor">
+                <label for="fechaCita" class="label-fecha-hora">Fecha y Hora:</label>
+                <input type="datetime-local" id="fechaCita" class="input-fecha-hora" required>
+            </div>
+
+            
+            <button type="button" onclick="agendarCita(2)">Agendar</button>
+
+            <div id="mensajeExito2" class="mensaje-exito">
+                Agendado con Éxito, espere su mensaje de confirmación
+            </div>
+            
+        </div>
+
+        <!-- Mapa de Sitios Autorizados -->
+        <div class="columna">
+            <h2>Tiendas y Centros Tecnicos Autorizados</h2>
+
+            <select class="input-ciudad">
+                <option value="" disabled selected>Selecciona la Ciudad</option>
+                <option value="felicitacion">Bogotá D.C.</option>
+                <option value="pregunta">Cali</option>
+                <option value="queja">Ibague</option>
+                <option value="reclamo">Neiva</option>
+            </select>
+
+            <select class="input-mapa">
+                <option value="" disabled selected>Selecciona la Dependencia</option>
+                <option value="felicitacion">Tienda</option>
+                <option value="pregunta">Centro Tecnico</option>
+            </select>
+            <iframe src="https://maps.google.com/maps?q=Neiva&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+            width="100%" height="300" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+    </div>
 
     <footer class="pie-pagina">
         <div class="grupo-1">
@@ -95,5 +196,6 @@
     </footer>
     <script src="/js/menu.js"></script>
     <script src="/js/header.js"></script>
+    <script src="/js/servicios.js"></script>
 </body>
 </html>

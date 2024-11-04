@@ -23,7 +23,7 @@ body {
     /*backdrop-filter: blur(15px); /* Aplica un efecto de desenfoque de fondo */
     /*background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente */
     border-radius: 15px; /* Bordes redondeados */
-        box-shadow: 0 0 15px rgba(237, 234, 234, 0.5); /* Sombra suave */
+    box-shadow: 0 0 15px rgba(237, 234, 234, 0.5); /* Sombra suave */
     gap: 20px; /* Espacio entre los elementos hijos */
     margin-top: 10%;
 }

@@ -1,12 +1,114 @@
-*{ 
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reset general */
+* {
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el relleno predeterminado de todos los elementos */
+    box-sizing: border-box; /* Incluye el padding y border en el tamaño total del elemento */
+    font-family: "Poppins", sans-serif; /* Aplica la fuente Poppins a todo el documento */
 }
 
-.servicios h1{
+/* Estructura principal del contenedor de contacto */
+.contenedor-servicio {
+    margin-top: 40px;
+    display: flex; /* Organiza el contenido en un contenedor flexible */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si es necesario */
+    max-width: 90%; /* Establece el ancho máximo en el 90% del contenedor padre */
+    margin: 70px auto; /* Añade margen superior y centra horizontalmente */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    backdrop-filter: blur(15px); /* Aplica un efecto de desenfoque de fondo */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo blanco semitransparente */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(224, 155, 8, 0.5); /* Sombra suave */
+    gap: 20px; /* Espacio entre los elementos hijos */
+}
 
-    color: #fff;
-    font-size: 200px;
+/* Estilo de las columnas */
+.columna {
+    flex: 1; /* Permite que cada columna tome espacio disponible en la fila */
+    width: 800px; /* Establece el ancho mínimo en el 45% */
+    padding: 40px; /* Espacio interno en cada columna */
+    height: 600px; /* Altura fija de cada columna */
+    backdrop-filter: blur(15px); /* Efecto de desenfoque para fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la columna */
+    text-align: center; /* Centra el texto en la columna */
+}
+
+/* Estilo del título de cada columna */
+.columna h2 {
+    font-size: 1.5rem; /* Tamaño de fuente del título */
+    color: orange; /* Color del texto */
+    margin-bottom: 1rem; /* Espacio debajo del título */
+}
+
+/* Estilo de los campos de entrada en PQR */
+.input-servicio, .input-ciudad, .input-tecnico, .input-mapa {
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    padding: 10px; /* Espacio interno del campo */
+    margin: 10px 0; /* Espacio arriba y abajo de cada campo */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
+
+/* Contenedor de la etiqueta y el campo de fecha/hora */
+.fecha-hora-contenedor {
+    display: flex; /* Coloca el label y el input en línea */
+    align-items: center; /* Alinea verticalmente al centro */
+    gap: 10px; /* Espacio entre la etiqueta y el campo */
+}
+
+/* Estilo para el texto de la etiqueta "Fecha y Hora" */
+.label-fecha-hora {
+    
+    color: #ffffff; /* Cambia a cualquier color que prefieras */
+    /*font-weight: bold; /* Hace el texto en negrilla */
+    font-size: 1.2rem; /* Cambia el tamaño de la fuente a tu preferencia */
+    text-align: left; /* Alinea el texto hacia la izquierda */
+    display: block; /* Asegura que el label ocupe toda la línea para la alineación */
+}
+
+/* Estilo para el campo de entrada de fecha y hora */
+.input-fecha-hora {
+    width: 477px; /* Ajusta el ancho del campo de fecha */
+    padding: 8px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde del campo */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+
+/* Estilo del botón de PQR */
+.columna button {
+    margin-top: 10px; /* Espacio superior */
+    padding: 10px 20px; /* Espacio interno arriba/abajo y laterales */
+    background-color: #dd990f; /* Fondo gris oscuro */
+    backdrop-filter: blur(15px); /* Efecto de desenfoque */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a puntero al pasar sobre el botón */
+}
+
+.columna button:hover {
+    background-color: #17ce23; /* Color de fondo en hover */
+}
+
+/* Estilos del mensaje de éxito */
+.mensaje-exito {
+    margin-top: 20px;
+    display: none;
+    color: rgb(239, 167, 10);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .contenedor-contacto {
+        flex-direction: column; /* Pone las columnas en una sola fila vertical */
+    }
+
+    .columna {
+        min-width: 100%; /* Ancho completo en columnas individuales */
+    }
 }
